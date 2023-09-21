@@ -1,0 +1,2 @@
+set(diff_drive_MESSAGE_FILES "/home/pi/rah_ws/devel/share/diff_drive/msg/GoToPoseAction.msg;/home/pi/rah_ws/devel/share/diff_drive/msg/GoToPoseActionGoal.msg;/home/pi/rah_ws/devel/share/diff_drive/msg/GoToPoseActionResult.msg;/home/pi/rah_ws/devel/share/diff_drive/msg/GoToPoseActionFeedback.msg;/home/pi/rah_ws/devel/share/diff_drive/msg/GoToPoseGoal.msg;/home/pi/rah_ws/devel/share/diff_drive/msg/GoToPoseResult.msg;/home/pi/rah_ws/devel/share/diff_drive/msg/GoToPoseFeedback.msg")
+set(diff_drive_SERVICE_FILES "")
