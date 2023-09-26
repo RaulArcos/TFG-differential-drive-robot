@@ -459,3 +459,62 @@ make[1]: se sale del directorio '/home/pi/rah_ws/build/CMakeFiles/CMakeTmp'
 
 
 
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_VISIBILITY succeeded with the following output:
+Change Dir: /home/pi/rah_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3716f/fast && /usr/bin/make -f CMakeFiles/cmTC_3716f.dir/build.make CMakeFiles/cmTC_3716f.dir/build
+make[1]: Entering directory '/home/pi/rah_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3716f.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_VISIBILITY   -fvisibility=hidden -o CMakeFiles/cmTC_3716f.dir/src.cxx.o -c /home/pi/rah_ws/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3716f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3716f.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_HAS_HIDDEN_VISIBILITY    -rdynamic CMakeFiles/cmTC_3716f.dir/src.cxx.o  -o cmTC_3716f 
+make[1]: Leaving directory '/home/pi/rah_ws/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY succeeded with the following output:
+Change Dir: /home/pi/rah_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1be36/fast && /usr/bin/make -f CMakeFiles/cmTC_1be36.dir/build.make CMakeFiles/cmTC_1be36.dir/build
+make[1]: Entering directory '/home/pi/rah_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1be36.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_1be36.dir/src.cxx.o -c /home/pi/rah_ws/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_1be36
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1be36.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY    -rdynamic CMakeFiles/cmTC_1be36.dir/src.cxx.o  -o cmTC_1be36 
+make[1]: Leaving directory '/home/pi/rah_ws/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR succeeded with the following output:
+Change Dir: /home/pi/rah_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_afe08/fast && /usr/bin/make -f CMakeFiles/cmTC_afe08.dir/build.make CMakeFiles/cmTC_afe08.dir/build
+make[1]: se entra en el directorio '/home/pi/rah_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_afe08.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_HAS_DEPRECATED_ATTR   -o CMakeFiles/cmTC_afe08.dir/src.cxx.o -c /home/pi/rah_ws/build/CMakeFiles/CMakeTmp/src.cxx
+/home/pi/rah_ws/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/pi/rah_ws/build/CMakeFiles/CMakeTmp/src.cxx:2:34: warning: ‘int somefunc()’ is deprecated [-Wdeprecated-declarations]
+     int main() { return somefunc();}
+                                  ^
+/home/pi/rah_ws/build/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+ __attribute__((__deprecated__)) int somefunc() { return 0; }
+                                     ^~~~~~~~
+/home/pi/rah_ws/build/CMakeFiles/CMakeTmp/src.cxx:2:34: warning: ‘int somefunc()’ is deprecated [-Wdeprecated-declarations]
+     int main() { return somefunc();}
+                                  ^
+/home/pi/rah_ws/build/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+ __attribute__((__deprecated__)) int somefunc() { return 0; }
+                                     ^~~~~~~~
+Linking CXX executable cmTC_afe08
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_afe08.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_HAS_DEPRECATED_ATTR    -rdynamic CMakeFiles/cmTC_afe08.dir/src.cxx.o  -o cmTC_afe08 
+make[1]: se sale del directorio '/home/pi/rah_ws/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}

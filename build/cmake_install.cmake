@@ -132,8 +132,12 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/pi/rah_ws/build/gtest/cmake_install.cmake")
   include("/home/pi/rah_ws/build/mobile_robot/cmake_install.cmake")
+  include("/home/pi/rah_ws/build/openslam_gmapping/cmake_install.cmake")
+  include("/home/pi/rah_ws/build/slam_gmapping/slam_gmapping/cmake_install.cmake")
+  include("/home/pi/rah_ws/build/teleop_twist_keyboard/cmake_install.cmake")
   include("/home/pi/rah_ws/build/diff_drive/cmake_install.cmake")
   include("/home/pi/rah_ws/build/rplidar_ros/cmake_install.cmake")
+  include("/home/pi/rah_ws/build/slam_gmapping/gmapping/cmake_install.cmake")
   include("/home/pi/rah_ws/build/rf2o_laser_odometry/cmake_install.cmake")
 
 endif()

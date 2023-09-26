@@ -1,2 +1,2 @@
-diff_drive:mobile_robot:rf2o_laser_odometry:rplidar_ros
+diff_drive:mobile_robot:openslam_gmapping:rf2o_laser_odometry:rplidar_ros:slam_gmapping/gmapping:slam_gmapping/slam_gmapping:teleop_twist_keyboard
 -DCATKIN_DEVEL_PREFIX=/home/pi/rah_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pi/rah_ws/install -G Unix Makefiles
