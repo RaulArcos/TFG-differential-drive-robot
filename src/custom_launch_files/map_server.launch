@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <arg name="launch_prefix" default=""/>
+  <arg name="scan_topic" default="/mobile_robot/laser/scan"/>
+  <arg name="sensor_frame" default="hokuyo"/>
+  <arg name="odom_frame" default="odom"/>
+  <arg name="base_frame" default="robot_footprint"/>
+  <arg name="global_frame" default="map"/>
+
+  <!-- Map Server Node -->
+  <arg name="map_file" default="$(find mobile_robot)/maps/robotuca_map_2.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+
+  <!-- AMCL Node -->
+
+  <node name="amcl" pkg="amcl" type="amcl" output="screen">
+  <remap from="scan" to="$(arg scan_topic)"/>
+  <param name="odom_frame_id" value="$(arg odom_frame)"/>
+  <param name="odom_model_type" value="diff-corrected"/>
+  <param name="base_frame_id" value="$(arg base_frame)"/>
+  <param name="global_frame_id" value="$(arg global_frame)"/>
+
+  <!-- 
+  <param name="initial_pose_x" value="0"/>
+  <param name="initial_pose_y" value="0"/>
+  -->
+
+  <param name="min_particles" value="25" />
+  <param name="max_particles" value="100" />
+  <param name="transform_tolerance" value="0.1" />
+
+  <param name="odom_alpha1" value="0.005" />
+  <param name="odom_alpha2" value="0.005" />
+  <param name="odom_alpha3" value="0.005" />
+  <param name="odom_alpha4" value="0.005" />
+  </node>
+
+ 
+
+</launch>
