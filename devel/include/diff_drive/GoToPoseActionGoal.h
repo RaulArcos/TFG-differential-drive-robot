@@ -210,7 +210,7 @@ struct Definition< ::diff_drive::GoToPoseActionGoal_<ContainerAllocator> >
 "\n"
 "================================================================================\n"
 "MSG: geometry_msgs/Pose\n"
-"# A representation of pose in free space, composed of position and orientation. \n"
+"# A representation of pose in free space, composed of postion and orientation. \n"
 "Point position\n"
 "Quaternion orientation\n"
 "\n"

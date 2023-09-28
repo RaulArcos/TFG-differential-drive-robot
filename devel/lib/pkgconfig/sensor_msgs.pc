@@ -1,0 +1,8 @@
+prefix=/home/pi/rah_ws/devel
+
+Name: sensor_msgs
+Description: Description of sensor_msgs
+Version: 1.11.10
+Cflags: -I/home/pi/rah_ws/devel/include -I/home/pi/rah_ws/src/common_msgs/sensor_msgs/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs message_runtime std_msgs

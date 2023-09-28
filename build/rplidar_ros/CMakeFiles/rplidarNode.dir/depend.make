@@ -52,6 +52,7 @@ rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o: /home/pi/ra
 rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o: /home/pi/rah_ws/src/rplidar_ros/sdk/src/rplidar_driver_serial.h
 rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o: /home/pi/rah_ws/src/rplidar_ros/sdk/src/sdkcommon.h
 
+rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /home/pi/rah_ws/devel/include/sensor_msgs/LaserScan.h
 rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /home/pi/rah_ws/src/rplidar_ros/sdk/include/rplidar.h
 rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /home/pi/rah_ws/src/rplidar_ros/sdk/include/rplidar_cmd.h
 rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /home/pi/rah_ws/src/rplidar_ros/sdk/include/rplidar_driver.h
@@ -114,7 +115,6 @@ rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /opt/ros/melodic/include/
 rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /opt/ros/melodic/include/ros/wall_timer.h
 rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /opt/ros/melodic/include/ros/wall_timer_options.h
 rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /opt/ros/melodic/include/rosconsole/macros_generated.h
-rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /opt/ros/melodic/include/sensor_msgs/LaserScan.h
 rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /opt/ros/melodic/include/std_msgs/Header.h
 rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /opt/ros/melodic/include/std_srvs/Empty.h
 rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o: /opt/ros/melodic/include/std_srvs/EmptyRequest.h

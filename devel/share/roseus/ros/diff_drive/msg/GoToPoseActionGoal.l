@@ -139,7 +139,7 @@ Pose pose
 
 ================================================================================
 MSG: geometry_msgs/Pose
-# A representation of pose in free space, composed of position and orientation. 
+# A representation of pose in free space, composed of postion and orientation. 
 Point position
 Quaternion orientation
 

@@ -23,6 +23,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/pi/rah_ws/src/rplidar_ros/./sdk/include"
   "/home/pi/rah_ws/src/rplidar_ros/./sdk/src"
+  "/home/pi/rah_ws/devel/include"
+  "/home/pi/rah_ws/src/common_msgs/sensor_msgs/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

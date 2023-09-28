@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/pi/rah_ws/build
 include diff_drive/CMakeFiles/_diff_drive_generate_messages_check_deps_GoToPoseGoal.dir/progress.make
 
 diff_drive/CMakeFiles/_diff_drive_generate_messages_check_deps_GoToPoseGoal:
-	cd /home/pi/rah_ws/build/diff_drive && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py diff_drive /home/pi/rah_ws/devel/share/diff_drive/msg/GoToPoseGoal.msg geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/PoseStamped:std_msgs/Header
+	cd /home/pi/rah_ws/build/diff_drive && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py diff_drive /home/pi/rah_ws/devel/share/diff_drive/msg/GoToPoseGoal.msg geometry_msgs/Quaternion:geometry_msgs/Pose:geometry_msgs/PoseStamped:geometry_msgs/Point:std_msgs/Header
 
 _diff_drive_generate_messages_check_deps_GoToPoseGoal: diff_drive/CMakeFiles/_diff_drive_generate_messages_check_deps_GoToPoseGoal
 _diff_drive_generate_messages_check_deps_GoToPoseGoal: diff_drive/CMakeFiles/_diff_drive_generate_messages_check_deps_GoToPoseGoal.dir/build.make

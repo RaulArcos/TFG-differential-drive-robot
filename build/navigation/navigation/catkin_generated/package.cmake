@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "navigation")
-set(navigation_VERSION "1.17.1")
+set(navigation_VERSION "1.16.7")
 set(navigation_MAINTAINER "Michael Ferguson <mfergs7@gmail.com>, David V. Lu!! <davidvlu@gmail.com>, Aaron Hoy <ahoy@fetchrobotics.com>")
 set(navigation_PACKAGE_FORMAT "2")
 set(navigation_BUILD_DEPENDS )
