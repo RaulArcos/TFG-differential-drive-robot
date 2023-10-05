@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <arg name="launch_prefix" default=""/>
+  <arg name="scan_topic" default="/scan"/>
+  <arg name="sensor_frame" default="laser"/>
+  <arg name="odom_frame" default="odom"/>
+  <arg name="base_frame" default="robot_footprint"/>
+  <arg name="global_frame" default="map"/>
+
+
+  <!-- AMCL Node -->
+  <include file="$(find mobile_robot)/launch/gmapping_demo.launch" pass_all_args="true">
+  </include>
+  
+</launch>
