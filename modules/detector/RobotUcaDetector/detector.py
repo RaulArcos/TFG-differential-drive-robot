@@ -1,8 +1,8 @@
 import yolov7
 
 class RobotUcaDetector:
-    def __init__(self, model_path='/etc/robotuca/models/yolov7.pt', device = '0', trace=False, size=640, half=False, hf_model=False):
-        self._model = yolov7.load('/etc/robotuca/models/yolov7.pt', '0', trace=False, size=640, hf_model=False)
+    def __init__(self, model_path='/etc/robotuca/models/yolov7.pt', device = '0', trace=False, size=640, half=False):
+        self._model = yolov7.load(model_path, device, trace=trace, size=size, hf_model=half)
         self._model.conf = 0.25
         self._model.iou = 0.45
     
@@ -13,3 +13,16 @@ class RobotUcaDetector:
         scores = predictions[:, 4]
         categories = predictions[:, 5]
         return boxes, scores, categories
+    
+    def detect_person_only(self, img):
+        boxes, scores, categories = self.detect(img)
+
+        person_boxes = []
+        person_scores = []
+
+        for i in range(len(boxes)):
+            if categories[i] == 0:
+                person_boxes.append(boxes[i])
+                person_scores.append(scores[i])
+        
+        return person_boxes, person_scores
