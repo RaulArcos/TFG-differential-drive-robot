@@ -1,0 +1,7 @@
+setup.py
+RobotUcaDetector/detector.py
+robotUcaDetector.egg-info/PKG-INFO
+robotUcaDetector.egg-info/SOURCES.txt
+robotUcaDetector.egg-info/dependency_links.txt
+robotUcaDetector.egg-info/not-zip-safe
+robotUcaDetector.egg-info/top_level.txt
