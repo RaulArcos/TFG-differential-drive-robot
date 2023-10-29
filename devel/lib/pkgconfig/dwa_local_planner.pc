@@ -1,8 +1,8 @@
-prefix=/home/robot/workspace/robotuca/devel
+prefix=/home/robot/robotuca/devel
 
 Name: dwa_local_planner
 Description: Description of dwa_local_planner
 Version: 1.17.3
-Cflags: -I/home/robot/workspace/robotuca/devel/include -I/home/robot/workspace/robotuca/src/navigation/dwa_local_planner/include
+Cflags: -I/home/robot/robotuca/devel/include -I/home/robot/robotuca/src/navigation/dwa_local_planner/include
 Libs: -L${prefix}/lib -ldwa_local_planner
 Requires: base_local_planner dynamic_reconfigure nav_msgs pluginlib sensor_msgs roscpp tf2 tf2_ros

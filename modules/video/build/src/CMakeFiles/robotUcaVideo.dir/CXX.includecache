@@ -14,9 +14,31 @@ common.hpp
 gst/gst.h
 -
 
-/home/robot/workspace/robotuca/modules/video/src/videosocket_output.cpp
+../include/webcam_input.hpp
+common.hpp
+../include/common.hpp
+gst/gst.h
+-
+string
+-
+
+/home/robot/robotuca/modules/video/src/main.cpp
+webcam_input.hpp
+/home/robot/robotuca/modules/video/src/webcam_input.hpp
 videosocket_output.hpp
-/home/robot/workspace/robotuca/modules/video/src/videosocket_output.hpp
+/home/robot/robotuca/modules/video/src/videosocket_output.hpp
+chrono
+-
+thread
+-
+
+/home/robot/robotuca/modules/video/src/videosocket_output.cpp
+videosocket_output.hpp
+/home/robot/robotuca/modules/video/src/videosocket_output.hpp
+
+/home/robot/robotuca/modules/video/src/webcam_input.cpp
+webcam_input.hpp
+/home/robot/robotuca/modules/video/src/webcam_input.hpp
 
 /usr/include/glib-2.0/glib-object.h
 gobject/gbinding.h

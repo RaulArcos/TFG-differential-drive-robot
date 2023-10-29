@@ -5,7 +5,7 @@ src/CMakeFiles/robotUcaVideo.dir/main.cpp.o
  ../include/common.hpp
  ../include/videosocket_output.hpp
  ../include/webcam_input.hpp
- /home/robot/workspace/robotuca/modules/video/src/main.cpp
+ /home/robot/robotuca/modules/video/src/main.cpp
  /usr/include/glib-2.0/glib-object.h
  /usr/include/glib-2.0/glib.h
  /usr/include/glib-2.0/glib/deprecated/gallocator.h
@@ -185,7 +185,7 @@ src/CMakeFiles/robotUcaVideo.dir/main.cpp.o
 src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o
  ../include/common.hpp
  ../include/videosocket_output.hpp
- /home/robot/workspace/robotuca/modules/video/src/videosocket_output.cpp
+ /home/robot/robotuca/modules/video/src/videosocket_output.cpp
  /usr/include/glib-2.0/glib-object.h
  /usr/include/glib-2.0/glib.h
  /usr/include/glib-2.0/glib/deprecated/gallocator.h
@@ -365,7 +365,7 @@ src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o
 src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o
  ../include/common.hpp
  ../include/webcam_input.hpp
- /home/robot/workspace/robotuca/modules/video/src/webcam_input.cpp
+ /home/robot/robotuca/modules/video/src/webcam_input.cpp
  /usr/include/glib-2.0/glib-object.h
  /usr/include/glib-2.0/glib.h
  /usr/include/glib-2.0/glib/deprecated/gallocator.h

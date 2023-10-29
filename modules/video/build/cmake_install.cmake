@@ -1,4 +1,4 @@
-# Install script for directory: /home/robot/workspace/robotuca/modules/video
+# Install script for directory: /home/robot/robotuca/modules/video
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/robot/workspace/robotuca/modules/video/build/src/cmake_install.cmake")
+  include("/home/robot/robotuca/modules/video/build/src/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/robot/workspace/robotuca/modules/video/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/robot/robotuca/modules/video/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

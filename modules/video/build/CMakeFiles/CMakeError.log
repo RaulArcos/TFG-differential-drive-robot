@@ -1,21 +1,21 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/robot/workspace/robotuca/modules/video/build/CMakeFiles/CMakeTmp
+Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_19f7e/fast && /usr/bin/make -f CMakeFiles/cmTC_19f7e.dir/build.make CMakeFiles/cmTC_19f7e.dir/build
-make[1]: Entering directory '/home/robot/workspace/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_19f7e.dir/src.cxx.o
-/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_19f7e.dir/src.cxx.o -c /home/robot/workspace/robotuca/modules/video/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_19f7e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19f7e.dir/link.txt --verbose=1
-/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_19f7e.dir/src.cxx.o  -o cmTC_19f7e 
-/usr/bin/ld: CMakeFiles/cmTC_19f7e.dir/src.cxx.o: in function `main':
+Run Build Command(s):/usr/bin/make cmTC_665c7/fast && /usr/bin/make -f CMakeFiles/cmTC_665c7.dir/build.make CMakeFiles/cmTC_665c7.dir/build
+make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_665c7.dir/src.cxx.o
+/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_665c7.dir/src.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_665c7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_665c7.dir/link.txt --verbose=1
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_665c7.dir/src.cxx.o  -o cmTC_665c7 
+/usr/bin/ld: CMakeFiles/cmTC_665c7.dir/src.cxx.o: in function `main':
 src.cxx:(.text+0x48): undefined reference to `pthread_create'
 /usr/bin/ld: src.cxx:(.text+0x50): undefined reference to `pthread_detach'
 /usr/bin/ld: src.cxx:(.text+0x5c): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_19f7e.dir/build.make:87: cmTC_19f7e] Error 1
-make[1]: Leaving directory '/home/robot/workspace/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_19f7e/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_665c7.dir/build.make:87: cmTC_665c7] Error 1
+make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_665c7/fast] Error 2
 
 
 Source file was:
@@ -39,20 +39,20 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/robot/workspace/robotuca/modules/video/build/CMakeFiles/CMakeTmp
+Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_a1057/fast && /usr/bin/make -f CMakeFiles/cmTC_a1057.dir/build.make CMakeFiles/cmTC_a1057.dir/build
-make[1]: Entering directory '/home/robot/workspace/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a1057.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a1057.dir/CheckFunctionExists.cxx.o -c /home/robot/workspace/robotuca/modules/video/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_a1057
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1057.dir/link.txt --verbose=1
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a1057.dir/CheckFunctionExists.cxx.o  -o cmTC_a1057  -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_e3a64/fast && /usr/bin/make -f CMakeFiles/cmTC_e3a64.dir/build.make CMakeFiles/cmTC_e3a64.dir/build
+make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e3a64.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e3a64.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_e3a64
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3a64.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e3a64.dir/CheckFunctionExists.cxx.o  -o cmTC_e3a64  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_a1057.dir/build.make:87: cmTC_a1057] Error 1
-make[1]: Leaving directory '/home/robot/workspace/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_a1057/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_e3a64.dir/build.make:87: cmTC_e3a64] Error 1
+make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e3a64/fast] Error 2
 
 
 

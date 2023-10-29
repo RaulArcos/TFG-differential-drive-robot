@@ -6,5 +6,5 @@ CXX_FLAGS =   -pthread
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/robot/workspace/robotuca/modules/video/src/../include -isystem /usr/include/gstreamer-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/aarch64-linux-gnu/glib-2.0/include -isystem /usr/include/orc-0.4 -isystem /usr/local/include/opencv4 
+CXX_INCLUDES = -I/home/robot/robotuca/modules/video/src/../include -isystem /usr/include/gstreamer-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/aarch64-linux-gnu/glib-2.0/include -isystem /usr/include/orc-0.4 -isystem /usr/local/include/opencv4 
 

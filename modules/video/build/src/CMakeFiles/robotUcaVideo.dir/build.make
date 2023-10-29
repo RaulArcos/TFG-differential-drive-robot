@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/workspace/robotuca/modules/video
+CMAKE_SOURCE_DIR = /home/robot/robotuca/modules/video
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/workspace/robotuca/modules/video/build
+CMAKE_BINARY_DIR = /home/robot/robotuca/modules/video/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/robotUcaVideo.dir/depend.make
@@ -59,42 +59,42 @@ include src/CMakeFiles/robotUcaVideo.dir/flags.make
 
 src/CMakeFiles/robotUcaVideo.dir/main.cpp.o: src/CMakeFiles/robotUcaVideo.dir/flags.make
 src/CMakeFiles/robotUcaVideo.dir/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robot/workspace/robotuca/modules/video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/robotUcaVideo.dir/main.cpp.o"
-	cd /home/robot/workspace/robotuca/modules/video/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robotUcaVideo.dir/main.cpp.o -c /home/robot/workspace/robotuca/modules/video/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robot/robotuca/modules/video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/robotUcaVideo.dir/main.cpp.o"
+	cd /home/robot/robotuca/modules/video/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robotUcaVideo.dir/main.cpp.o -c /home/robot/robotuca/modules/video/src/main.cpp
 
 src/CMakeFiles/robotUcaVideo.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotUcaVideo.dir/main.cpp.i"
-	cd /home/robot/workspace/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/workspace/robotuca/modules/video/src/main.cpp > CMakeFiles/robotUcaVideo.dir/main.cpp.i
+	cd /home/robot/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/robotuca/modules/video/src/main.cpp > CMakeFiles/robotUcaVideo.dir/main.cpp.i
 
 src/CMakeFiles/robotUcaVideo.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotUcaVideo.dir/main.cpp.s"
-	cd /home/robot/workspace/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/workspace/robotuca/modules/video/src/main.cpp -o CMakeFiles/robotUcaVideo.dir/main.cpp.s
+	cd /home/robot/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/robotuca/modules/video/src/main.cpp -o CMakeFiles/robotUcaVideo.dir/main.cpp.s
 
 src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o: src/CMakeFiles/robotUcaVideo.dir/flags.make
 src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o: ../src/videosocket_output.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robot/workspace/robotuca/modules/video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o"
-	cd /home/robot/workspace/robotuca/modules/video/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o -c /home/robot/workspace/robotuca/modules/video/src/videosocket_output.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robot/robotuca/modules/video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o"
+	cd /home/robot/robotuca/modules/video/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o -c /home/robot/robotuca/modules/video/src/videosocket_output.cpp
 
 src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.i"
-	cd /home/robot/workspace/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/workspace/robotuca/modules/video/src/videosocket_output.cpp > CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.i
+	cd /home/robot/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/robotuca/modules/video/src/videosocket_output.cpp > CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.i
 
 src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.s"
-	cd /home/robot/workspace/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/workspace/robotuca/modules/video/src/videosocket_output.cpp -o CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.s
+	cd /home/robot/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/robotuca/modules/video/src/videosocket_output.cpp -o CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.s
 
 src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o: src/CMakeFiles/robotUcaVideo.dir/flags.make
 src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o: ../src/webcam_input.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robot/workspace/robotuca/modules/video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o"
-	cd /home/robot/workspace/robotuca/modules/video/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o -c /home/robot/workspace/robotuca/modules/video/src/webcam_input.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robot/robotuca/modules/video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o"
+	cd /home/robot/robotuca/modules/video/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o -c /home/robot/robotuca/modules/video/src/webcam_input.cpp
 
 src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.i"
-	cd /home/robot/workspace/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/workspace/robotuca/modules/video/src/webcam_input.cpp > CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.i
+	cd /home/robot/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/robotuca/modules/video/src/webcam_input.cpp > CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.i
 
 src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.s"
-	cd /home/robot/workspace/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/workspace/robotuca/modules/video/src/webcam_input.cpp -o CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.s
+	cd /home/robot/robotuca/modules/video/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/robotuca/modules/video/src/webcam_input.cpp -o CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.s
 
 # Object files for target robotUcaVideo
 robotUcaVideo_OBJECTS = \
@@ -183,8 +183,8 @@ src/robotUcaVideo: /usr/lib/aarch64-linux-gnu/libgstreamer-1.0.so
 src/robotUcaVideo: /usr/lib/aarch64-linux-gnu/libgobject-2.0.so
 src/robotUcaVideo: /usr/lib/aarch64-linux-gnu/libglib-2.0.so
 src/robotUcaVideo: src/CMakeFiles/robotUcaVideo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robot/workspace/robotuca/modules/video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable robotUcaVideo"
-	cd /home/robot/workspace/robotuca/modules/video/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robotUcaVideo.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robot/robotuca/modules/video/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable robotUcaVideo"
+	cd /home/robot/robotuca/modules/video/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robotUcaVideo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/robotUcaVideo.dir/build: src/robotUcaVideo
@@ -192,10 +192,10 @@ src/CMakeFiles/robotUcaVideo.dir/build: src/robotUcaVideo
 .PHONY : src/CMakeFiles/robotUcaVideo.dir/build
 
 src/CMakeFiles/robotUcaVideo.dir/clean:
-	cd /home/robot/workspace/robotuca/modules/video/build/src && $(CMAKE_COMMAND) -P CMakeFiles/robotUcaVideo.dir/cmake_clean.cmake
+	cd /home/robot/robotuca/modules/video/build/src && $(CMAKE_COMMAND) -P CMakeFiles/robotUcaVideo.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/robotUcaVideo.dir/clean
 
 src/CMakeFiles/robotUcaVideo.dir/depend:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/workspace/robotuca/modules/video /home/robot/workspace/robotuca/modules/video/src /home/robot/workspace/robotuca/modules/video/build /home/robot/workspace/robotuca/modules/video/build/src /home/robot/workspace/robotuca/modules/video/build/src/CMakeFiles/robotUcaVideo.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robot/robotuca/modules/video/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/robotuca/modules/video /home/robot/robotuca/modules/video/src /home/robot/robotuca/modules/video/build /home/robot/robotuca/modules/video/build/src /home/robot/robotuca/modules/video/build/src/CMakeFiles/robotUcaVideo.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/robotUcaVideo.dir/depend
 

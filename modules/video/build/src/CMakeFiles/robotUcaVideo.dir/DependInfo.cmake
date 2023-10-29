@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robot/workspace/robotuca/modules/video/src/main.cpp" "/home/robot/workspace/robotuca/modules/video/build/src/CMakeFiles/robotUcaVideo.dir/main.cpp.o"
-  "/home/robot/workspace/robotuca/modules/video/src/videosocket_output.cpp" "/home/robot/workspace/robotuca/modules/video/build/src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o"
-  "/home/robot/workspace/robotuca/modules/video/src/webcam_input.cpp" "/home/robot/workspace/robotuca/modules/video/build/src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o"
+  "/home/robot/robotuca/modules/video/src/main.cpp" "/home/robot/robotuca/modules/video/build/src/CMakeFiles/robotUcaVideo.dir/main.cpp.o"
+  "/home/robot/robotuca/modules/video/src/videosocket_output.cpp" "/home/robot/robotuca/modules/video/build/src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o"
+  "/home/robot/robotuca/modules/video/src/webcam_input.cpp" "/home/robot/robotuca/modules/video/build/src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

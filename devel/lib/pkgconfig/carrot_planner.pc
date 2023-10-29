@@ -1,8 +1,8 @@
-prefix=/home/robot/workspace/robotuca/devel
+prefix=/home/robot/robotuca/devel
 
 Name: carrot_planner
 Description: Description of carrot_planner
 Version: 1.17.3
-Cflags: -I/home/robot/workspace/robotuca/src/navigation/carrot_planner/include
+Cflags: -I/home/robot/robotuca/src/navigation/carrot_planner/include
 Libs: -L${prefix}/lib -lcarrot_planner
 Requires: angles base_local_planner costmap_2d nav_core pluginlib roscpp tf2 tf2_ros

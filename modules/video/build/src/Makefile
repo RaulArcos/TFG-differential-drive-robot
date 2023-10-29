@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/workspace/robotuca/modules/video
+CMAKE_SOURCE_DIR = /home/robot/robotuca/modules/video
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/workspace/robotuca/modules/video/build
+CMAKE_BINARY_DIR = /home/robot/robotuca/modules/video/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -94,7 +94,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/robot/workspace/robotuca/modules/video/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/robot/workspace/robotuca/modules/video/build/CPackSourceConfig.cmake
+	cd /home/robot/robotuca/modules/video/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/robot/robotuca/modules/video/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -138,7 +138,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/robot/workspace/robotuca/modules/video/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/robot/robotuca/modules/video/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -148,14 +148,14 @@ package/fast: package
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/robot/workspace/robotuca/modules/video/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/robot/workspace/robotuca/modules/video/build/CMakeFiles /home/robot/workspace/robotuca/modules/video/build/src/CMakeFiles/progress.marks
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/workspace/robotuca/modules/video/build/CMakeFiles 0
+	cd /home/robot/robotuca/modules/video/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotuca/modules/video/build/CMakeFiles /home/robot/robotuca/modules/video/build/src/CMakeFiles/progress.marks
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotuca/modules/video/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -165,22 +165,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/robot/robotuca/modules/video/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/robotUcaVideo.dir/rule:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/robotUcaVideo.dir/rule
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/robotUcaVideo.dir/rule
 .PHONY : src/CMakeFiles/robotUcaVideo.dir/rule
 
 # Convenience name for target.
@@ -190,7 +190,7 @@ robotUcaVideo: src/CMakeFiles/robotUcaVideo.dir/rule
 
 # fast build rule for target.
 robotUcaVideo/fast:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/build
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/build
 .PHONY : robotUcaVideo/fast
 
 main.o: main.cpp.o
@@ -199,7 +199,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/main.cpp.o
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -208,7 +208,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/main.cpp.i
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -217,7 +217,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/main.cpp.s
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 videosocket_output.o: videosocket_output.cpp.o
@@ -226,7 +226,7 @@ videosocket_output.o: videosocket_output.cpp.o
 
 # target to build an object file
 videosocket_output.cpp.o:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.o
 .PHONY : videosocket_output.cpp.o
 
 videosocket_output.i: videosocket_output.cpp.i
@@ -235,7 +235,7 @@ videosocket_output.i: videosocket_output.cpp.i
 
 # target to preprocess a source file
 videosocket_output.cpp.i:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.i
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.i
 .PHONY : videosocket_output.cpp.i
 
 videosocket_output.s: videosocket_output.cpp.s
@@ -244,7 +244,7 @@ videosocket_output.s: videosocket_output.cpp.s
 
 # target to generate assembly for a file
 videosocket_output.cpp.s:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.s
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/videosocket_output.cpp.s
 .PHONY : videosocket_output.cpp.s
 
 webcam_input.o: webcam_input.cpp.o
@@ -253,7 +253,7 @@ webcam_input.o: webcam_input.cpp.o
 
 # target to build an object file
 webcam_input.cpp.o:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.o
 .PHONY : webcam_input.cpp.o
 
 webcam_input.i: webcam_input.cpp.i
@@ -262,7 +262,7 @@ webcam_input.i: webcam_input.cpp.i
 
 # target to preprocess a source file
 webcam_input.cpp.i:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.i
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.i
 .PHONY : webcam_input.cpp.i
 
 webcam_input.s: webcam_input.cpp.s
@@ -271,7 +271,7 @@ webcam_input.s: webcam_input.cpp.s
 
 # target to generate assembly for a file
 webcam_input.cpp.s:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.s
+	cd /home/robot/robotuca/modules/video/build && $(MAKE) -f src/CMakeFiles/robotUcaVideo.dir/build.make src/CMakeFiles/robotUcaVideo.dir/webcam_input.cpp.s
 .PHONY : webcam_input.cpp.s
 
 # Help Target
@@ -309,6 +309,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/robot/workspace/robotuca/modules/video/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/robot/robotuca/modules/video/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -6,15 +6,15 @@ class RobotUcaDetector:
         self._model.conf = 0.25
         self._model.iou = 0.45
     
-    def detect(self, img):
-        results = self._model(img, size=640, augment=True)
+    def detect(self, img, size = 720, augment = True):
+        results = self._model(img, size=720, augment=True)
         predictions = results.pred[0]
         boxes = predictions[:, :4]
         scores = predictions[:, 4]
         categories = predictions[:, 5]
         return boxes, scores, categories
     
-    def detect_person_only(self, img):
+    def detect_person_only(self, img, size = 720, augment = True):
         boxes, scores, categories = self.detect(img)
 
         person_boxes = []

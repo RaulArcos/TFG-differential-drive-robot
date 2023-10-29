@@ -11,17 +11,15 @@ def main():
     while cap.isOpened():
         ret, frame = cap.read()
         start_time = time.time()
-        boxes, scores = detector.detect_person_only(frame)
+        boxes, scores, _ = detector.detect(frame)
         end_time = time.time()
         elapsed_time = end_time - start_time
         print(f"Inference time: {elapsed_time * 1000} ms")
-                
+                                                    
         for i in range(len(boxes)):
             if scores[i] > 0.5:
                 x1, y1, x2, y2 = boxes[i]
-                color = (0, 255, 0)  # This example uses green (BGR format)
-                
-                # Draw the rectangle on the frame
+                color = (0, 255, 0)
                 cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), color, thickness=2)
                 label = f"Score: {scores[i]:.2f}"
                 cv2.putText(frame, label, (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)

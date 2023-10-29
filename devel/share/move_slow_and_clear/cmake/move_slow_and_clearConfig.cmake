@@ -67,14 +67,14 @@ set(move_slow_and_clear_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(move_slow_and_clear_SOURCE_PREFIX /home/robot/workspace/robotuca/src/navigation/move_slow_and_clear)
-  set(move_slow_and_clear_DEVEL_PREFIX /home/robot/workspace/robotuca/devel)
+  set(move_slow_and_clear_SOURCE_PREFIX /home/robot/robotuca/src/navigation/move_slow_and_clear)
+  set(move_slow_and_clear_DEVEL_PREFIX /home/robot/robotuca/devel)
   set(move_slow_and_clear_INSTALL_PREFIX "")
   set(move_slow_and_clear_PREFIX ${move_slow_and_clear_DEVEL_PREFIX})
 else()
   set(move_slow_and_clear_SOURCE_PREFIX "")
   set(move_slow_and_clear_DEVEL_PREFIX "")
-  set(move_slow_and_clear_INSTALL_PREFIX /home/robot/workspace/robotuca/install)
+  set(move_slow_and_clear_INSTALL_PREFIX /home/robot/robotuca/install)
   set(move_slow_and_clear_PREFIX ${move_slow_and_clear_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(move_slow_and_clear_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/robot/workspace/robotuca/src/navigation/move_slow_and_clear/include " STREQUAL " ")
+if(NOT "/home/robot/robotuca/src/navigation/move_slow_and_clear/include " STREQUAL " ")
   set(move_slow_and_clear_INCLUDE_DIRS "")
-  set(_include_dirs "/home/robot/workspace/robotuca/src/navigation/move_slow_and_clear/include")
+  set(_include_dirs "/home/robot/robotuca/src/navigation/move_slow_and_clear/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/move_slow_and_clear " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/robot/workspace/robotuca/src/navigation/move_slow_and_clear/includ
         message(FATAL_ERROR "Project 'move_slow_and_clear' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'move_slow_and_clear' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robot/workspace/robotuca/src/navigation/move_slow_and_clear/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'move_slow_and_clear' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robot/robotuca/src/navigation/move_slow_and_clear/${idir}'.  ${_report}")
     endif()
     _list_append_unique(move_slow_and_clear_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robot/workspace/robotuca/devel/lib;/home/robot/workspace/robotuca/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/robot/robotuca/devel/lib;/home/robot/robotuca/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

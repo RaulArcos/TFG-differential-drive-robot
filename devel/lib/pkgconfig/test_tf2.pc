@@ -1,4 +1,4 @@
-prefix=/home/robot/workspace/robotuca/devel
+prefix=/home/robot/robotuca/devel
 
 Name: test_tf2
 Description: Description of test_tf2
