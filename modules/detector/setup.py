@@ -3,7 +3,7 @@ from setuptools import setup
 NAME='robotUcaDetector'
 VERSION='0.1.0'
 DESCRIPTION='RobotUca IA detection module'
-AUTHOR='GTD DSS'
+AUTHOR='Raúl Arcos Herrera'
 EMAIL='raularcosherrera@gmail.com'
 LICENSE=''
 PACKAGES=['RobotUcaDetector']

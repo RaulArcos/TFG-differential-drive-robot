@@ -51,13 +51,9 @@ class PeopleFollower:
     
     def calculateAngleFromBoundingBox(self, box):
         x1, y1, x2, y2 = box
-        box_width = x2 - x1
         box_center = ((x2 + x1) / 2, (y2 + y1) / 2)
         image_width_center = self._frame_width / 2
-        camera_fov_horizontal_rad = math.radians(self._camera_fov)
-
         offset = box_center[0] - image_width_center
-
         return math.atan(offset / (self._frame_width / 2) * math.tan(math.radians(self._camera_fov) / 2))
     
     def loop(self):

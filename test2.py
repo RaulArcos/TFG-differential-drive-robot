@@ -26,11 +26,7 @@ def main():
                 fov = 55
                 object_width_real_world = 0.55
                 box_width = x2 - x1
-                normalized_width = box_width / width
-                box_area = (x2 - x1) * (y2 - y1)
-                box_area_norm = box_area / (width * height)
                 box_center = ((x2 + x1) / 2, (y2 + y1) / 2)
-                box_center_norm = ((box_center[0] / width), (box_center[1] / height))
                 color = (0, 255, 0)
                 distance = (object_width_real_world) / (2 * math.tan(math.radians(fov / 2)) * (1280 / box_width))
                 cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), color, thickness=2)

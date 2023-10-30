@@ -4383,3 +4383,4 @@ build/robotuca_people_follower/catkin_generated/installspace/robotuca_people_fol
 build/robotuca_people_follower/catkin_generated/installspace/robotuca_people_followerConfig.cmake
 build/robotuca_people_follower/catkin_generated/stamps/robotuca_people_follower/package.xml.stamp
 build/robotuca_people_follower/catkin_generated/stamps/robotuca_people_follower/pkg.pc.em.stamp
+src/rf2o_laser_odometry
