@@ -14,7 +14,7 @@ class RobotUcaDetector:
         categories = predictions[:, 5]
         return boxes, scores, categories
     
-    def detect_person_only(self, img, size = 720, augment = True):
+    def detectPersonOnly(self, img, size = 720, augment = True):
         boxes, scores, categories = self.detect(img)
         person_boxes = []
         person_scores = []

@@ -36,7 +36,6 @@ class gstVideoClient(object):
     def get_frame(self):
         return self._nframe, self._frame
         
-
     def _extract_frame(self, sink, _):
         sample = sink.emit("pull-sample")
         

@@ -1,0 +1,8 @@
+prefix=/home/robot/robotuca/devel
+
+Name: robotuca_people_follower
+Description: Description of robotuca_people_follower
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
