@@ -51,7 +51,7 @@ class WebServerManager():
                 await self.webserver_image(websocket, path)
 
         async def websockets_main():
-            async with websockets.serve(router, None, 5000, reuse_address=True, reuse_port=True) as self._websocket_server:
+            async with websockets.serve(router, None, 8080, reuse_address=True, reuse_port=True) as self._websocket_server:
                 await asyncio.Future()
         asyncio.run(websockets_main())
 
