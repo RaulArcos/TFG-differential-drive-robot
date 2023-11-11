@@ -5,7 +5,8 @@
   
   <!-- Real robot -->
   <!---->
-  <!-- <machine name="plataforma" address="192.168.100.200" env-loader="/home/pi/pmob_ws/devel/env.sh" default="false" user="pi"/> -->
+  <arg name="ticks_per_meter" value="100" />
+  <arg name="wheel_separation" value="0.2" />
 
   <include file="$(find mobile_robot)/launch/robot_description.launch" pass_all_args="true"/>
   <!-- <include file="$(find diff_drive)/launch/demo3.launch" pass_all_args="true"/> -->

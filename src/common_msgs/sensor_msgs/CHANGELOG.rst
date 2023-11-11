@@ -2,72 +2,28 @@
 Changelog for package sensor_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.13.1 (2021-01-11)
--------------------
-* Update package maintainers (`#168 <https://github.com/ros/common_msgs/issues/168>`_)
-* Contributors: Michel Hidalgo
-
-1.13.0 (2020-05-21)
--------------------
-* Update BatteryState.msg (`#140 <https://github.com/ros/common_msgs/issues/140>`_)
-* Use setuptools instead of distutils (`#159 <https://github.com/ros/common_msgs/issues/159>`_)
-* Bump CMake version to avoid CMP0048 warning (`#158 <https://github.com/ros/common_msgs/issues/158>`_)
-* Fix TabError: inconsistent use of tabs and spaces in indentation (`#155 <https://github.com/ros/common_msgs/issues/155>`_)
-  * Fix TabError: inconsistent use of tabs and spaces in indentation
-  Python 3 is much more strict for spacing.
-* Contributors: Ramon Wijnands, Rein Appeldoorn, Shane Loretz
-
-1.12.7 (2018-11-06)
--------------------
-* Include sstream on header that needs i (`#131 <https://github.com/ros/common_msgs/issues/131>`_)
-* included missing import for the read_points_list method (`#128 <https://github.com/ros/common_msgs/issues/128>`_)
-  * included missing import for the read_points_list method
-* Merge pull request `#127 <https://github.com/ros/common_msgs/issues/127>`_ from ros-1/fix-typos
-* Merge pull request `#85 <https://github.com/ros/common_msgs/issues/85>`_ from ros/missing_test_target_dependency
-  fix missing test target dependency
-* Contributors: Dirk Thomas, Jasper, Kuang Fangjun, Tully Foote, chapulina
-
-1.12.6 (2018-05-03)
--------------------
-* Return default value to prevent missing return warning.
-* Add function to convert PointCloud2 to namedtuples
-  Add new function read_points_list that converts a PointCloud2 to a list of named tuples.
-  It works on top of read_points, which generates lists containing the values.
-  In consequence read_points_list is slower than read_points.
-* Added equidistant distortion model const
-* Added test_depend on rosunit in sensor_msgs
-* fix catkin_lint warnings
-* add mingration rule, copied from common_msgs-1.6
+1.11.10 (2018-05-03)
+--------------------
 * Add missing include for atoi.
   Fixes `#97 <https://github.com/ros/common_msgs/issues/97>`_
-* Contributors: 2scholz, Adam Allevato, Ivor Wanders, Kei Okada, Tully Foote, alexzzhu
+* Add const variable for abstract image encoding prefixes
+* Deal with abstract image encodings in bitDepth
+* Deal with abstract image encodings in numChannels
+* Contributors: Kentaro Wada, Tully Foote
 
-1.12.5 (2016-09-30)
+1.11.9 (2016-02-22)
 -------------------
-* Deal with abstract image encodings
-* Fix spelling mistakes
-* Fix year
-* Contributors: Jochen Sprickerhof, Kentaro Wada, trorornmn
-
-1.12.4 (2016-02-22)
--------------------
-* added type mapping and support for different types of points in point clouds
+* added type mapping and support for different types of point cloud points
 * remove boost dependency fixes `#81 <https://github.com/ros/common_msgs/issues/81>`_
 * adding a BatteryState message
-* fix iterator doc
+* Contributors: Sebastian Pütz, Tully Foote
+
+1.11.8 (2015-04-20)
+-------------------
 * remove warning due to anonymous namespace
-* Contributors: Sebastian Pütz, Tully Foote, Vincent Rabaud
+* Contributors: Vincent Rabaud
 
-1.12.3 (2015-04-20)
--------------------
-
-1.12.2 (2015-03-21)
--------------------
-
-1.12.1 (2015-03-17)
--------------------
-
-1.12.0 (2014-12-29)
+1.11.7 (2015-03-21)
 -------------------
 
 1.11.6 (2014-11-04)

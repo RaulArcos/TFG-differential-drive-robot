@@ -27,7 +27,6 @@ struct BatteryState_
   BatteryState_()
     : header()
     , voltage(0.0)
-    , temperature(0.0)
     , current(0.0)
     , charge(0.0)
     , capacity(0.0)
@@ -38,14 +37,12 @@ struct BatteryState_
     , power_supply_technology(0)
     , present(false)
     , cell_voltage()
-    , cell_temperature()
     , location()
     , serial_number()  {
     }
   BatteryState_(const ContainerAllocator& _alloc)
     : header(_alloc)
     , voltage(0.0)
-    , temperature(0.0)
     , current(0.0)
     , charge(0.0)
     , capacity(0.0)
@@ -56,7 +53,6 @@ struct BatteryState_
     , power_supply_technology(0)
     , present(false)
     , cell_voltage(_alloc)
-    , cell_temperature(_alloc)
     , location(_alloc)
     , serial_number(_alloc)  {
   (void)_alloc;
@@ -69,9 +65,6 @@ struct BatteryState_
 
    typedef float _voltage_type;
   _voltage_type voltage;
-
-   typedef float _temperature_type;
-  _temperature_type temperature;
 
    typedef float _current_type;
   _current_type current;
@@ -102,9 +95,6 @@ struct BatteryState_
 
    typedef std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> _cell_voltage_type;
   _cell_voltage_type cell_voltage;
-
-   typedef std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> _cell_temperature_type;
-  _cell_temperature_type cell_temperature;
 
    typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _location_type;
   _location_type location;
@@ -273,7 +263,6 @@ bool operator==(const ::sensor_msgs::BatteryState_<ContainerAllocator1> & lhs, c
 {
   return lhs.header == rhs.header &&
     lhs.voltage == rhs.voltage &&
-    lhs.temperature == rhs.temperature &&
     lhs.current == rhs.current &&
     lhs.charge == rhs.charge &&
     lhs.capacity == rhs.capacity &&
@@ -284,7 +273,6 @@ bool operator==(const ::sensor_msgs::BatteryState_<ContainerAllocator1> & lhs, c
     lhs.power_supply_technology == rhs.power_supply_technology &&
     lhs.present == rhs.present &&
     lhs.cell_voltage == rhs.cell_voltage &&
-    lhs.cell_temperature == rhs.cell_temperature &&
     lhs.location == rhs.location &&
     lhs.serial_number == rhs.serial_number;
 }
@@ -343,12 +331,12 @@ struct MD5Sum< ::sensor_msgs::BatteryState_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "4ddae7f048e32fda22cac764685e3974";
+    return "476f837fa6771f6e16e3bf4ef96f8770";
   }
 
   static const char* value(const ::sensor_msgs::BatteryState_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x4ddae7f048e32fdaULL;
-  static const uint64_t static_value2 = 0x22cac764685e3974ULL;
+  static const uint64_t static_value1 = 0x476f837fa6771f6eULL;
+  static const uint64_t static_value2 = 0x16e3bf4ef96f8770ULL;
 };
 
 template<class ContainerAllocator>
@@ -402,7 +390,6 @@ struct Definition< ::sensor_msgs::BatteryState_<ContainerAllocator> >
 "\n"
 "Header  header\n"
 "float32 voltage          # Voltage in Volts (Mandatory)\n"
-"float32 temperature      # Temperature in Degrees Celsius (If unmeasured NaN)\n"
 "float32 current          # Negative when discharging (A)  (If unmeasured NaN)\n"
 "float32 charge           # Current charge in Ah  (If unmeasured NaN)\n"
 "float32 capacity         # Capacity in Ah (last full capacity)  (If unmeasured NaN)\n"
@@ -415,8 +402,6 @@ struct Definition< ::sensor_msgs::BatteryState_<ContainerAllocator> >
 "\n"
 "float32[] cell_voltage   # An array of individual cell voltages for each cell in the pack\n"
 "                         # If individual voltages unknown but number of cells known set each to NaN\n"
-"float32[] cell_temperature  # An array of individual cell temperatures for each cell in the pack\n"
-"                            # If individual temperatures unknown but number of cells known set each to NaN\n"
 "string location          # The location into which the battery is inserted. (slot number or plug)\n"
 "string serial_number     # The best approximation of the battery serial number\n"
 "\n"
@@ -455,7 +440,6 @@ namespace serialization
     {
       stream.next(m.header);
       stream.next(m.voltage);
-      stream.next(m.temperature);
       stream.next(m.current);
       stream.next(m.charge);
       stream.next(m.capacity);
@@ -466,7 +450,6 @@ namespace serialization
       stream.next(m.power_supply_technology);
       stream.next(m.present);
       stream.next(m.cell_voltage);
-      stream.next(m.cell_temperature);
       stream.next(m.location);
       stream.next(m.serial_number);
     }
@@ -492,8 +475,6 @@ struct Printer< ::sensor_msgs::BatteryState_<ContainerAllocator> >
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
     s << indent << "voltage: ";
     Printer<float>::stream(s, indent + "  ", v.voltage);
-    s << indent << "temperature: ";
-    Printer<float>::stream(s, indent + "  ", v.temperature);
     s << indent << "current: ";
     Printer<float>::stream(s, indent + "  ", v.current);
     s << indent << "charge: ";
@@ -517,12 +498,6 @@ struct Printer< ::sensor_msgs::BatteryState_<ContainerAllocator> >
     {
       s << indent << "  cell_voltage[" << i << "]: ";
       Printer<float>::stream(s, indent + "  ", v.cell_voltage[i]);
-    }
-    s << indent << "cell_temperature[]" << std::endl;
-    for (size_t i = 0; i < v.cell_temperature.size(); ++i)
-    {
-      s << indent << "  cell_temperature[" << i << "]: ";
-      Printer<float>::stream(s, indent + "  ", v.cell_temperature[i]);
     }
     s << indent << "location: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.location);

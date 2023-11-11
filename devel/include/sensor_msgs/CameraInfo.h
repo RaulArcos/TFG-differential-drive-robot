@@ -276,7 +276,7 @@ struct Definition< ::sensor_msgs::CameraInfo_<ContainerAllocator> >
 "\n"
 "# The distortion model used. Supported models are listed in\n"
 "# sensor_msgs/distortion_models.h. For most cameras, \"plumb_bob\" - a\n"
-"# simple model of radial and tangential distortion - is sufficient.\n"
+"# simple model of radial and tangential distortion - is sufficent.\n"
 "string distortion_model\n"
 "\n"
 "# The distortion parameters, size depending on the distortion model.\n"

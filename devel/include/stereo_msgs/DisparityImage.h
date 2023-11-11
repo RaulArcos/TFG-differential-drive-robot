@@ -245,7 +245,7 @@ struct Definition< ::stereo_msgs::DisparityImage_<ContainerAllocator> >
 "\n"
 "Header header        # Header timestamp should be acquisition time of image\n"
 "                     # Header frame_id should be optical frame of camera\n"
-"                     # origin of frame should be optical center of camera\n"
+"                     # origin of frame should be optical center of cameara\n"
 "                     # +x should point to the right in the image\n"
 "                     # +y should point down in the image\n"
 "                     # +z should point into to plane of the image\n"

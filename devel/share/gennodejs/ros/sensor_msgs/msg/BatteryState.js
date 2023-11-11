@@ -21,7 +21,6 @@ class BatteryState {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.header = null;
       this.voltage = null;
-      this.temperature = null;
       this.current = null;
       this.charge = null;
       this.capacity = null;
@@ -32,7 +31,6 @@ class BatteryState {
       this.power_supply_technology = null;
       this.present = null;
       this.cell_voltage = null;
-      this.cell_temperature = null;
       this.location = null;
       this.serial_number = null;
     }
@@ -48,12 +46,6 @@ class BatteryState {
       }
       else {
         this.voltage = 0.0;
-      }
-      if (initObj.hasOwnProperty('temperature')) {
-        this.temperature = initObj.temperature
-      }
-      else {
-        this.temperature = 0.0;
       }
       if (initObj.hasOwnProperty('current')) {
         this.current = initObj.current
@@ -115,12 +107,6 @@ class BatteryState {
       else {
         this.cell_voltage = [];
       }
-      if (initObj.hasOwnProperty('cell_temperature')) {
-        this.cell_temperature = initObj.cell_temperature
-      }
-      else {
-        this.cell_temperature = [];
-      }
       if (initObj.hasOwnProperty('location')) {
         this.location = initObj.location
       }
@@ -142,8 +128,6 @@ class BatteryState {
     bufferOffset = std_msgs.msg.Header.serialize(obj.header, buffer, bufferOffset);
     // Serialize message field [voltage]
     bufferOffset = _serializer.float32(obj.voltage, buffer, bufferOffset);
-    // Serialize message field [temperature]
-    bufferOffset = _serializer.float32(obj.temperature, buffer, bufferOffset);
     // Serialize message field [current]
     bufferOffset = _serializer.float32(obj.current, buffer, bufferOffset);
     // Serialize message field [charge]
@@ -164,8 +148,6 @@ class BatteryState {
     bufferOffset = _serializer.bool(obj.present, buffer, bufferOffset);
     // Serialize message field [cell_voltage]
     bufferOffset = _arraySerializer.float32(obj.cell_voltage, buffer, bufferOffset, null);
-    // Serialize message field [cell_temperature]
-    bufferOffset = _arraySerializer.float32(obj.cell_temperature, buffer, bufferOffset, null);
     // Serialize message field [location]
     bufferOffset = _serializer.string(obj.location, buffer, bufferOffset);
     // Serialize message field [serial_number]
@@ -181,8 +163,6 @@ class BatteryState {
     data.header = std_msgs.msg.Header.deserialize(buffer, bufferOffset);
     // Deserialize message field [voltage]
     data.voltage = _deserializer.float32(buffer, bufferOffset);
-    // Deserialize message field [temperature]
-    data.temperature = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [current]
     data.current = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [charge]
@@ -203,8 +183,6 @@ class BatteryState {
     data.present = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [cell_voltage]
     data.cell_voltage = _arrayDeserializer.float32(buffer, bufferOffset, null)
-    // Deserialize message field [cell_temperature]
-    data.cell_temperature = _arrayDeserializer.float32(buffer, bufferOffset, null)
     // Deserialize message field [location]
     data.location = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [serial_number]
@@ -216,10 +194,9 @@ class BatteryState {
     let length = 0;
     length += std_msgs.msg.Header.getMessageSize(object.header);
     length += 4 * object.cell_voltage.length;
-    length += 4 * object.cell_temperature.length;
     length += _getByteLength(object.location);
     length += _getByteLength(object.serial_number);
-    return length + 48;
+    return length + 40;
   }
 
   static datatype() {
@@ -229,7 +206,7 @@ class BatteryState {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '4ddae7f048e32fda22cac764685e3974';
+    return '476f837fa6771f6e16e3bf4ef96f8770';
   }
 
   static messageDefinition() {
@@ -270,7 +247,6 @@ class BatteryState {
     
     Header  header
     float32 voltage          # Voltage in Volts (Mandatory)
-    float32 temperature      # Temperature in Degrees Celsius (If unmeasured NaN)
     float32 current          # Negative when discharging (A)  (If unmeasured NaN)
     float32 charge           # Current charge in Ah  (If unmeasured NaN)
     float32 capacity         # Capacity in Ah (last full capacity)  (If unmeasured NaN)
@@ -283,8 +259,6 @@ class BatteryState {
     
     float32[] cell_voltage   # An array of individual cell voltages for each cell in the pack
                              # If individual voltages unknown but number of cells known set each to NaN
-    float32[] cell_temperature  # An array of individual cell temperatures for each cell in the pack
-                                # If individual temperatures unknown but number of cells known set each to NaN
     string location          # The location into which the battery is inserted. (slot number or plug)
     string serial_number     # The best approximation of the battery serial number
     
@@ -325,13 +299,6 @@ class BatteryState {
     }
     else {
       resolved.voltage = 0.0
-    }
-
-    if (msg.temperature !== undefined) {
-      resolved.temperature = msg.temperature;
-    }
-    else {
-      resolved.temperature = 0.0
     }
 
     if (msg.current !== undefined) {
@@ -402,13 +369,6 @@ class BatteryState {
     }
     else {
       resolved.cell_voltage = []
-    }
-
-    if (msg.cell_temperature !== undefined) {
-      resolved.cell_temperature = msg.cell_temperature;
-    }
-    else {
-      resolved.cell_temperature = []
     }
 
     if (msg.location !== undefined) {

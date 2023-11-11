@@ -105,14 +105,13 @@
 
 (defclass sensor_msgs::BatteryState
   :super ros::object
-  :slots (_header _voltage _temperature _current _charge _capacity _design_capacity _percentage _power_supply_status _power_supply_health _power_supply_technology _present _cell_voltage _cell_temperature _location _serial_number ))
+  :slots (_header _voltage _current _charge _capacity _design_capacity _percentage _power_supply_status _power_supply_health _power_supply_technology _present _cell_voltage _location _serial_number ))
 
 (defmethod sensor_msgs::BatteryState
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
     ((:voltage __voltage) 0.0)
-    ((:temperature __temperature) 0.0)
     ((:current __current) 0.0)
     ((:charge __charge) 0.0)
     ((:capacity __capacity) 0.0)
@@ -123,14 +122,12 @@
     ((:power_supply_technology __power_supply_technology) 0)
     ((:present __present) nil)
     ((:cell_voltage __cell_voltage) (make-array 0 :initial-element 0.0 :element-type :float))
-    ((:cell_temperature __cell_temperature) (make-array 0 :initial-element 0.0 :element-type :float))
     ((:location __location) "")
     ((:serial_number __serial_number) "")
     )
    (send-super :init)
    (setq _header __header)
    (setq _voltage (float __voltage))
-   (setq _temperature (float __temperature))
    (setq _current (float __current))
    (setq _charge (float __charge))
    (setq _capacity (float __capacity))
@@ -141,7 +138,6 @@
    (setq _power_supply_technology (round __power_supply_technology))
    (setq _present __present)
    (setq _cell_voltage __cell_voltage)
-   (setq _cell_temperature __cell_temperature)
    (setq _location (string __location))
    (setq _serial_number (string __serial_number))
    self)
@@ -155,9 +151,6 @@
   (:voltage
    (&optional __voltage)
    (if __voltage (setq _voltage __voltage)) _voltage)
-  (:temperature
-   (&optional __temperature)
-   (if __temperature (setq _temperature __temperature)) _temperature)
   (:current
    (&optional __current)
    (if __current (setq _current __current)) _current)
@@ -188,9 +181,6 @@
   (:cell_voltage
    (&optional __cell_voltage)
    (if __cell_voltage (setq _cell_voltage __cell_voltage)) _cell_voltage)
-  (:cell_temperature
-   (&optional __cell_temperature)
-   (if __cell_temperature (setq _cell_temperature __cell_temperature)) _cell_temperature)
   (:location
    (&optional __location)
    (if __location (setq _location __location)) _location)
@@ -203,8 +193,6 @@
     ;; std_msgs/Header _header
     (send _header :serialization-length)
     ;; float32 _voltage
-    4
-    ;; float32 _temperature
     4
     ;; float32 _current
     4
@@ -226,8 +214,6 @@
     1
     ;; float32[] _cell_voltage
     (* 4    (length _cell_voltage)) 4
-    ;; float32[] _cell_temperature
-    (* 4    (length _cell_temperature)) 4
     ;; string _location
     4 (length _location)
     ;; string _serial_number
@@ -241,8 +227,6 @@
        (send _header :serialize s)
      ;; float32 _voltage
        (sys::poke _voltage (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
-     ;; float32 _temperature
-       (sys::poke _temperature (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;; float32 _current
        (sys::poke _current (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;; float32 _charge
@@ -266,11 +250,6 @@
      (dotimes (i (length _cell_voltage))
        (sys::poke (elt _cell_voltage i) (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
        )
-     ;; float32[] _cell_temperature
-     (write-long (length _cell_temperature) s)
-     (dotimes (i (length _cell_temperature))
-       (sys::poke (elt _cell_temperature i) (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
-       )
      ;; string _location
        (write-long (length _location) s) (princ _location s)
      ;; string _serial_number
@@ -283,8 +262,6 @@
      (send _header :deserialize buf ptr-) (incf ptr- (send _header :serialization-length))
    ;; float32 _voltage
      (setq _voltage (sys::peek buf ptr- :float)) (incf ptr- 4)
-   ;; float32 _temperature
-     (setq _temperature (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;; float32 _current
      (setq _current (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;; float32 _charge
@@ -310,13 +287,6 @@
      (dotimes (i n)
      (setf (elt _cell_voltage i) (sys::peek buf ptr- :float)) (incf ptr- 4)
      ))
-   ;; float32[] _cell_temperature
-   (let (n)
-     (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4)
-     (setq _cell_temperature (instantiate float-vector n))
-     (dotimes (i n)
-     (setf (elt _cell_temperature i) (sys::peek buf ptr- :float)) (incf ptr- 4)
-     ))
    ;; string _location
      (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _location (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
    ;; string _serial_number
@@ -325,7 +295,7 @@
    self)
   )
 
-(setf (get sensor_msgs::BatteryState :md5sum-) "4ddae7f048e32fda22cac764685e3974")
+(setf (get sensor_msgs::BatteryState :md5sum-) "476f837fa6771f6e16e3bf4ef96f8770")
 (setf (get sensor_msgs::BatteryState :datatype-) "sensor_msgs/BatteryState")
 (setf (get sensor_msgs::BatteryState :definition-)
       "
@@ -363,7 +333,6 @@ uint8 POWER_SUPPLY_TECHNOLOGY_LIMN = 6
 
 Header  header
 float32 voltage          # Voltage in Volts (Mandatory)
-float32 temperature      # Temperature in Degrees Celsius (If unmeasured NaN)
 float32 current          # Negative when discharging (A)  (If unmeasured NaN)
 float32 charge           # Current charge in Ah  (If unmeasured NaN)
 float32 capacity         # Capacity in Ah (last full capacity)  (If unmeasured NaN)
@@ -376,8 +345,6 @@ bool    present          # True if the battery is present
 
 float32[] cell_voltage   # An array of individual cell voltages for each cell in the pack
                          # If individual voltages unknown but number of cells known set each to NaN
-float32[] cell_temperature  # An array of individual cell temperatures for each cell in the pack
-                            # If individual temperatures unknown but number of cells known set each to NaN
 string location          # The location into which the battery is inserted. (slot number or plug)
 string serial_number     # The best approximation of the battery serial number
 
@@ -401,6 +368,6 @@ string frame_id
 
 
 
-(provide :sensor_msgs/BatteryState "4ddae7f048e32fda22cac764685e3974")
+(provide :sensor_msgs/BatteryState "476f837fa6771f6e16e3bf4ef96f8770")
 
 

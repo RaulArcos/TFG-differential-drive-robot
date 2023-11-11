@@ -3,8 +3,6 @@
           HEADER
           VOLTAGE-VAL
           VOLTAGE
-          TEMPERATURE-VAL
-          TEMPERATURE
           CURRENT-VAL
           CURRENT
           CHARGE-VAL
@@ -25,8 +23,6 @@
           PRESENT
           CELL_VOLTAGE-VAL
           CELL_VOLTAGE
-          CELL_TEMPERATURE-VAL
-          CELL_TEMPERATURE
           LOCATION-VAL
           LOCATION
           SERIAL_NUMBER-VAL

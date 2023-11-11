@@ -9,7 +9,7 @@ import struct
 import std_msgs.msg
 
 class BatteryState(genpy.Message):
-  _md5sum = "4ddae7f048e32fda22cac764685e3974"
+  _md5sum = "476f837fa6771f6e16e3bf4ef96f8770"
   _type = "sensor_msgs/BatteryState"
   _has_header = True  # flag to mark the presence of a Header object
   _full_text = """
@@ -47,7 +47,6 @@ uint8 POWER_SUPPLY_TECHNOLOGY_LIMN = 6
 
 Header  header
 float32 voltage          # Voltage in Volts (Mandatory)
-float32 temperature      # Temperature in Degrees Celsius (If unmeasured NaN)
 float32 current          # Negative when discharging (A)  (If unmeasured NaN)
 float32 charge           # Current charge in Ah  (If unmeasured NaN)
 float32 capacity         # Capacity in Ah (last full capacity)  (If unmeasured NaN)
@@ -60,8 +59,6 @@ bool    present          # True if the battery is present
 
 float32[] cell_voltage   # An array of individual cell voltages for each cell in the pack
                          # If individual voltages unknown but number of cells known set each to NaN
-float32[] cell_temperature  # An array of individual cell temperatures for each cell in the pack
-                            # If individual temperatures unknown but number of cells known set each to NaN
 string location          # The location into which the battery is inserted. (slot number or plug)
 string serial_number     # The best approximation of the battery serial number
 
@@ -104,8 +101,8 @@ string frame_id
   POWER_SUPPLY_TECHNOLOGY_NICD = 5
   POWER_SUPPLY_TECHNOLOGY_LIMN = 6
 
-  __slots__ = ['header','voltage','temperature','current','charge','capacity','design_capacity','percentage','power_supply_status','power_supply_health','power_supply_technology','present','cell_voltage','cell_temperature','location','serial_number']
-  _slot_types = ['std_msgs/Header','float32','float32','float32','float32','float32','float32','float32','uint8','uint8','uint8','bool','float32[]','float32[]','string','string']
+  __slots__ = ['header','voltage','current','charge','capacity','design_capacity','percentage','power_supply_status','power_supply_health','power_supply_technology','present','cell_voltage','location','serial_number']
+  _slot_types = ['std_msgs/Header','float32','float32','float32','float32','float32','float32','uint8','uint8','uint8','bool','float32[]','string','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -115,7 +112,7 @@ string frame_id
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       header,voltage,temperature,current,charge,capacity,design_capacity,percentage,power_supply_status,power_supply_health,power_supply_technology,present,cell_voltage,cell_temperature,location,serial_number
+       header,voltage,current,charge,capacity,design_capacity,percentage,power_supply_status,power_supply_health,power_supply_technology,present,cell_voltage,location,serial_number
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -128,8 +125,6 @@ string frame_id
         self.header = std_msgs.msg.Header()
       if self.voltage is None:
         self.voltage = 0.
-      if self.temperature is None:
-        self.temperature = 0.
       if self.current is None:
         self.current = 0.
       if self.charge is None:
@@ -150,8 +145,6 @@ string frame_id
         self.present = False
       if self.cell_voltage is None:
         self.cell_voltage = []
-      if self.cell_temperature is None:
-        self.cell_temperature = []
       if self.location is None:
         self.location = ''
       if self.serial_number is None:
@@ -159,7 +152,6 @@ string frame_id
     else:
       self.header = std_msgs.msg.Header()
       self.voltage = 0.
-      self.temperature = 0.
       self.current = 0.
       self.charge = 0.
       self.capacity = 0.
@@ -170,7 +162,6 @@ string frame_id
       self.power_supply_technology = 0
       self.present = False
       self.cell_voltage = []
-      self.cell_temperature = []
       self.location = ''
       self.serial_number = ''
 
@@ -195,15 +186,11 @@ string frame_id
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_7f4B().pack(_x.voltage, _x.temperature, _x.current, _x.charge, _x.capacity, _x.design_capacity, _x.percentage, _x.power_supply_status, _x.power_supply_health, _x.power_supply_technology, _x.present))
+      buff.write(_get_struct_6f4B().pack(_x.voltage, _x.current, _x.charge, _x.capacity, _x.design_capacity, _x.percentage, _x.power_supply_status, _x.power_supply_health, _x.power_supply_technology, _x.present))
       length = len(self.cell_voltage)
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
       buff.write(struct.Struct(pattern).pack(*self.cell_voltage))
-      length = len(self.cell_temperature)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%sf'%length
-      buff.write(struct.Struct(pattern).pack(*self.cell_temperature))
       _x = self.location
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -245,8 +232,8 @@ string frame_id
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 32
-      (_x.voltage, _x.temperature, _x.current, _x.charge, _x.capacity, _x.design_capacity, _x.percentage, _x.power_supply_status, _x.power_supply_health, _x.power_supply_technology, _x.present,) = _get_struct_7f4B().unpack(str[start:end])
+      end += 28
+      (_x.voltage, _x.current, _x.charge, _x.capacity, _x.design_capacity, _x.percentage, _x.power_supply_status, _x.power_supply_health, _x.power_supply_technology, _x.present,) = _get_struct_6f4B().unpack(str[start:end])
       self.present = bool(self.present)
       start = end
       end += 4
@@ -256,14 +243,6 @@ string frame_id
       s = struct.Struct(pattern)
       end += s.size
       self.cell_voltage = s.unpack(str[start:end])
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sf'%length
-      start = end
-      s = struct.Struct(pattern)
-      end += s.size
-      self.cell_temperature = s.unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -303,15 +282,11 @@ string frame_id
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_7f4B().pack(_x.voltage, _x.temperature, _x.current, _x.charge, _x.capacity, _x.design_capacity, _x.percentage, _x.power_supply_status, _x.power_supply_health, _x.power_supply_technology, _x.present))
+      buff.write(_get_struct_6f4B().pack(_x.voltage, _x.current, _x.charge, _x.capacity, _x.design_capacity, _x.percentage, _x.power_supply_status, _x.power_supply_health, _x.power_supply_technology, _x.present))
       length = len(self.cell_voltage)
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
       buff.write(self.cell_voltage.tostring())
-      length = len(self.cell_temperature)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%sf'%length
-      buff.write(self.cell_temperature.tostring())
       _x = self.location
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -354,8 +329,8 @@ string frame_id
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 32
-      (_x.voltage, _x.temperature, _x.current, _x.charge, _x.capacity, _x.design_capacity, _x.percentage, _x.power_supply_status, _x.power_supply_health, _x.power_supply_technology, _x.present,) = _get_struct_7f4B().unpack(str[start:end])
+      end += 28
+      (_x.voltage, _x.current, _x.charge, _x.capacity, _x.design_capacity, _x.percentage, _x.power_supply_status, _x.power_supply_health, _x.power_supply_technology, _x.present,) = _get_struct_6f4B().unpack(str[start:end])
       self.present = bool(self.present)
       start = end
       end += 4
@@ -365,14 +340,6 @@ string frame_id
       s = struct.Struct(pattern)
       end += s.size
       self.cell_voltage = numpy.frombuffer(str[start:end], dtype=numpy.float32, count=length)
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sf'%length
-      start = end
-      s = struct.Struct(pattern)
-      end += s.size
-      self.cell_temperature = numpy.frombuffer(str[start:end], dtype=numpy.float32, count=length)
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -405,9 +372,9 @@ def _get_struct_3I():
     if _struct_3I is None:
         _struct_3I = struct.Struct("<3I")
     return _struct_3I
-_struct_7f4B = None
-def _get_struct_7f4B():
-    global _struct_7f4B
-    if _struct_7f4B is None:
-        _struct_7f4B = struct.Struct("<7f4B")
-    return _struct_7f4B
+_struct_6f4B = None
+def _get_struct_6f4B():
+    global _struct_6f4B
+    if _struct_6f4B is None:
+        _struct_6f4B = struct.Struct("<6f4B")
+    return _struct_6f4B

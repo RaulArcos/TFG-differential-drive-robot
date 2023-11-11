@@ -99,7 +99,7 @@ if(NOT "/home/robot/robotuca/devel/include;/home/robot/robotuca/src/common_msgs/
   elseif(NOT "http://ros.org/wiki/sensor_msgs " STREQUAL " ")
     set(_report "Check the website 'http://ros.org/wiki/sensor_msgs' for information and consider reporting the problem.")
   else()
-    set(_report "Report the problem to the maintainer 'Michel Hidalgo <michel@ekumenlabs.com>' and request to fix the problem.")
+    set(_report "Report the problem to the maintainer 'Tully Foote <tfoote@osrfoundation.org>' and request to fix the problem.")
   endif()
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})

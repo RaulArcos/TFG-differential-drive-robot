@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 2.8.3)
 project(sensor_msgs)
 
 find_package(catkin REQUIRED COMPONENTS geometry_msgs message_generation std_msgs)
@@ -52,9 +52,6 @@ catkin_package(
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
   FILES_MATCHING PATTERN "*.h")
-
-install(DIRECTORY migration_rules
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
 if (CATKIN_ENABLE_TESTING)
   add_subdirectory(test)
