@@ -1,4 +1,7 @@
 .canvas-wrapper-general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
     padding-top: 0%;
@@ -13,6 +16,7 @@
     height: 50%;
     display: block;
     padding-bottom: 0%;
+    padding-top: 10%;
     image-rendering: crisp-edges;
 }
 
@@ -21,15 +25,4 @@
     width: 100%;
     padding-top: 0%;
     /* Relación de aspecto 4:3 (3/4 * 100) */
-}
-
-.canvas-wrapper-video canvas {
-    position: relative;
-    top: 0px;
-    left: 15%;
-    width: 70%;
-    height: 50%;
-    display: block;
-    padding-bottom: 3%;
-    image-rendering: crisp-edges;
 }

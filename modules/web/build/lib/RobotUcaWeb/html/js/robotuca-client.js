@@ -1,17 +1,10 @@
-// Create a WebSocket connection
-const socket = new WebSocket("ws://localhost:8080/video");
-
-// Connection opened
+socket = new WebSocket("ws://localhost:5000/ws/video/");
 socket.addEventListener("open", (event) => {
-  console.log("Connected to the WebSocket server.");
-  // You can send messages here, for example:
-  socket.send("Hello, WebSocket!");
+  console.log("Connected to the videosocket.");
 });
 
-// Listen for messages
 socket.addEventListener("message", (event) => {
-  console.log(`Received message: ${event.data}`);
-  // Handle incoming messages from the server
+  draw_img(event.data, "FrameCanvas");
 });
 
 // Connection closed
@@ -27,3 +20,31 @@ socket.addEventListener("close", (event) => {
 socket.addEventListener("error", (event) => {
   console.error("WebSocket error:", event);
 });
+
+function draw_img(imdata, canvas_id, MAX_HEIGHT=720, MAX_WIDTH=1280){    
+  var img = new Image();
+  var canvas = document.getElementById(canvas_id);
+  var rowWidth = canvas.parentNode.offsetWidth; // Ancho de la celda padre
+  var desiredWidth = rowWidth * 0.7; // El 70% del ancho de la celda
+
+  img.onload = function(){
+     
+  // Obtiene las dimensiones originales de la imagen
+     var originalWidth = img.width;
+     var originalHeight = img.height;
+
+     // Calcula la altura proporcional según el nuevo ancho deseado
+     var desiredHeight = (originalHeight / originalWidth) * desiredWidth;
+
+     // Establece las nuevas dimensiones al canvas
+     canvas.width = desiredWidth;
+     canvas.height = desiredHeight;
+
+     // Dibuja la imagen en el canvas
+     var ctx = canvas.getContext("2d");
+     ctx.clearRect(0, 0, canvas.width, canvas.height);
+     ctx.drawImage(img, 0, 0, desiredWidth, desiredHeight);
+  };
+
+  img.src = "data:image/jpg;base64," + imdata;
+}

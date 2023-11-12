@@ -15,13 +15,13 @@ The CXX compiler identification is GNU, found in "/home/robot/robotuca/modules/v
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_8df2a/fast && /usr/bin/make -f CMakeFiles/cmTC_8df2a.dir/build.make CMakeFiles/cmTC_8df2a.dir/build
+Run Build Command(s):/usr/bin/make cmTC_94f2f/fast && /usr/bin/make -f CMakeFiles/cmTC_94f2f.dir/build.make CMakeFiles/cmTC_94f2f.dir/build
 make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8df2a.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_8df2a.dir/testCXXCompiler.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_8df2a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8df2a.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_8df2a.dir/testCXXCompiler.cxx.o  -o cmTC_8df2a 
+Building CXX object CMakeFiles/cmTC_94f2f.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_94f2f.dir/testCXXCompiler.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_94f2f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94f2f.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_94f2f.dir/testCXXCompiler.cxx.o  -o cmTC_94f2f 
 make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
 
 
@@ -29,18 +29,18 @@ make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_c21b5/fast && /usr/bin/make -f CMakeFiles/cmTC_c21b5.dir/build.make CMakeFiles/cmTC_c21b5.dir/build
+Run Build Command(s):/usr/bin/make cmTC_6574f/fast && /usr/bin/make -f CMakeFiles/cmTC_6574f.dir/build.make CMakeFiles/cmTC_6574f.dir/build
 make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++    -v -o CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+Building CXX object CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++    -v -o CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 Target: aarch64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu
 Thread model: posix
 gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/9/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccnjcMVj.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/9/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccTehmc8.s
 GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (aarch64-linux-gnu)
 	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
 
@@ -64,15 +64,15 @@ GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (aarch64-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 76f300a9566415b293c4e87b0a05621d
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccnjcMVj.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccTehmc8.s
 GNU assembler version 2.34 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
-Linking CXX executable cmTC_c21b5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c21b5.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c21b5 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+Linking CXX executable cmTC_6574f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6574f.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6574f 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/9/lto-wrapper
@@ -82,9 +82,9 @@ Thread model: posix
 gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c21b5' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2kOyJR.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_c21b5 /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/9 -L/usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/9/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/9/../../.. CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/9/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c21b5' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6574f' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cciZaKam.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_6574f /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/9 -L/usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/9/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/9/../../.. CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/9/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6574f' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
 make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
 
 
@@ -114,18 +114,18 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_c21b5/fast && /usr/bin/make -f CMakeFiles/cmTC_c21b5.dir/build.make CMakeFiles/cmTC_c21b5.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_6574f/fast && /usr/bin/make -f CMakeFiles/cmTC_6574f.dir/build.make CMakeFiles/cmTC_6574f.dir/build]
   ignore line: [make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Building CXX object CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [Target: aarch64-linux-gnu]
   ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/9/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccnjcMVj.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/9/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccTehmc8.s]
   ignore line: [GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (aarch64-linux-gnu)]
   ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
   ignore line: []
@@ -149,15 +149,15 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 76f300a9566415b293c4e87b0a05621d]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccnjcMVj.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccTehmc8.s]
   ignore line: [GNU assembler version 2.34 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [Linking CXX executable cmTC_c21b5]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c21b5.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c21b5 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [Linking CXX executable cmTC_6574f]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6574f.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6574f ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/9/lto-wrapper]
@@ -167,13 +167,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/9/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c21b5' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2kOyJR.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_c21b5 /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/9 -L/usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/9/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/9/../../.. CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/9/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6574f' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cciZaKam.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_6574f /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/9 -L/usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/9/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/9/../../.. CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/9/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc2kOyJR.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cciZaKam.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -193,7 +193,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c21b5] ==> ignore
+    arg [cmTC_6574f] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/9/../../../aarch64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/9/crtbeginS.o] ==> ignore
@@ -205,7 +205,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/9/../../..]
-    arg [CMakeFiles/cmTC_c21b5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_6574f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -231,13 +231,13 @@ Parsed CXX implicit link information from above output:
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_ac27f/fast && /usr/bin/make -f CMakeFiles/cmTC_ac27f.dir/build.make CMakeFiles/cmTC_ac27f.dir/build
+Run Build Command(s):/usr/bin/make cmTC_f73e1/fast && /usr/bin/make -f CMakeFiles/cmTC_f73e1.dir/build.make CMakeFiles/cmTC_f73e1.dir/build
 make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ac27f.dir/CheckIncludeFile.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_ac27f.dir/CheckIncludeFile.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
-Linking CXX executable cmTC_ac27f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac27f.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_ac27f.dir/CheckIncludeFile.cxx.o  -o cmTC_ac27f 
+Building CXX object CMakeFiles/cmTC_f73e1.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_f73e1.dir/CheckIncludeFile.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_f73e1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f73e1.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_f73e1.dir/CheckIncludeFile.cxx.o  -o cmTC_f73e1 
 make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
 
 
@@ -245,13 +245,13 @@ make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e2eb5/fast && /usr/bin/make -f CMakeFiles/cmTC_e2eb5.dir/build.make CMakeFiles/cmTC_e2eb5.dir/build
+Run Build Command(s):/usr/bin/make cmTC_c8d8b/fast && /usr/bin/make -f CMakeFiles/cmTC_c8d8b.dir/build.make CMakeFiles/cmTC_c8d8b.dir/build
 make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e2eb5.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e2eb5.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_e2eb5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2eb5.dir/link.txt --verbose=1
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e2eb5.dir/CheckFunctionExists.cxx.o  -o cmTC_e2eb5  -lpthread 
+Building CXX object CMakeFiles/cmTC_c8d8b.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c8d8b.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_c8d8b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8d8b.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c8d8b.dir/CheckFunctionExists.cxx.o  -o cmTC_c8d8b  -lpthread 
 make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
 
 
@@ -259,13 +259,13 @@ make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/
 Determining if the function XOpenDisplay exists in the /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so passed with the following output:
 Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_da721/fast && /usr/bin/make -f CMakeFiles/cmTC_da721.dir/build.make CMakeFiles/cmTC_da721.dir/build
+Run Build Command(s):/usr/bin/make cmTC_5c347/fast && /usr/bin/make -f CMakeFiles/cmTC_5c347.dir/build.make CMakeFiles/cmTC_5c347.dir/build
 make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_da721.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_da721.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_da721
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da721.dir/link.txt --verbose=1
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_da721.dir/CheckFunctionExists.cxx.o  -o cmTC_da721  /usr/lib/aarch64-linux-gnu/libX11.so /usr/lib/aarch64-linux-gnu/libXext.so 
+Building CXX object CMakeFiles/cmTC_5c347.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_5c347.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_5c347
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c347.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_5c347.dir/CheckFunctionExists.cxx.o  -o cmTC_5c347  /usr/lib/aarch64-linux-gnu/libX11.so /usr/lib/aarch64-linux-gnu/libXext.so 
 make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
 
 
@@ -273,13 +273,13 @@ make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_66bde/fast && /usr/bin/make -f CMakeFiles/cmTC_66bde.dir/build.make CMakeFiles/cmTC_66bde.dir/build
+Run Build Command(s):/usr/bin/make cmTC_358b7/fast && /usr/bin/make -f CMakeFiles/cmTC_358b7.dir/build.make CMakeFiles/cmTC_358b7.dir/build
 make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_66bde.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_66bde.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_66bde
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66bde.dir/link.txt --verbose=1
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_66bde.dir/CheckFunctionExists.cxx.o  -o cmTC_66bde 
+Building CXX object CMakeFiles/cmTC_358b7.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_358b7.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_358b7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_358b7.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_358b7.dir/CheckFunctionExists.cxx.o  -o cmTC_358b7 
 make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
 
 
@@ -287,13 +287,13 @@ make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/
 Determining if the function connect exists passed with the following output:
 Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_d84a3/fast && /usr/bin/make -f CMakeFiles/cmTC_d84a3.dir/build.make CMakeFiles/cmTC_d84a3.dir/build
+Run Build Command(s):/usr/bin/make cmTC_d1d95/fast && /usr/bin/make -f CMakeFiles/cmTC_d1d95.dir/build.make CMakeFiles/cmTC_d1d95.dir/build
 make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d84a3.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_d84a3.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_d84a3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d84a3.dir/link.txt --verbose=1
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_d84a3.dir/CheckFunctionExists.cxx.o  -o cmTC_d84a3 
+Building CXX object CMakeFiles/cmTC_d1d95.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_d1d95.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_d1d95
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1d95.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_d1d95.dir/CheckFunctionExists.cxx.o  -o cmTC_d1d95 
 make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
 
 
@@ -301,13 +301,13 @@ make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/
 Determining if the function remove exists passed with the following output:
 Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e661c/fast && /usr/bin/make -f CMakeFiles/cmTC_e661c.dir/build.make CMakeFiles/cmTC_e661c.dir/build
+Run Build Command(s):/usr/bin/make cmTC_57eef/fast && /usr/bin/make -f CMakeFiles/cmTC_57eef.dir/build.make CMakeFiles/cmTC_57eef.dir/build
 make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e661c.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_e661c.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_e661c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e661c.dir/link.txt --verbose=1
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_e661c.dir/CheckFunctionExists.cxx.o  -o cmTC_e661c 
+Building CXX object CMakeFiles/cmTC_57eef.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_57eef.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_57eef
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57eef.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_57eef.dir/CheckFunctionExists.cxx.o  -o cmTC_57eef 
 make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
 
 
@@ -315,13 +315,13 @@ make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/
 Determining if the function shmat exists passed with the following output:
 Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_1775b/fast && /usr/bin/make -f CMakeFiles/cmTC_1775b.dir/build.make CMakeFiles/cmTC_1775b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_6e743/fast && /usr/bin/make -f CMakeFiles/cmTC_6e743.dir/build.make CMakeFiles/cmTC_6e743.dir/build
 make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1775b.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_1775b.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_1775b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1775b.dir/link.txt --verbose=1
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_1775b.dir/CheckFunctionExists.cxx.o  -o cmTC_1775b 
+Building CXX object CMakeFiles/cmTC_6e743.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_6e743.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_6e743
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e743.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_6e743.dir/CheckFunctionExists.cxx.o  -o cmTC_6e743 
 make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
 
 
@@ -329,13 +329,13 @@ make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_cabfd/fast && /usr/bin/make -f CMakeFiles/cmTC_cabfd.dir/build.make CMakeFiles/cmTC_cabfd.dir/build
+Run Build Command(s):/usr/bin/make cmTC_aaf39/fast && /usr/bin/make -f CMakeFiles/cmTC_aaf39.dir/build.make CMakeFiles/cmTC_aaf39.dir/build
 make[1]: Entering directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cabfd.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_cabfd.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_cabfd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cabfd.dir/link.txt --verbose=1
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_cabfd.dir/CheckFunctionExists.cxx.o  -o cmTC_cabfd  -lICE 
+Building CXX object CMakeFiles/cmTC_aaf39.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_aaf39.dir/CheckFunctionExists.cxx.o -c /home/robot/robotuca/modules/video/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_aaf39
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aaf39.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_aaf39.dir/CheckFunctionExists.cxx.o  -o cmTC_aaf39  -lICE 
 make[1]: Leaving directory '/home/robot/robotuca/modules/video/build/CMakeFiles/CMakeTmp'
 
 

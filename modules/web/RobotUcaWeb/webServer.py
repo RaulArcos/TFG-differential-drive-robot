@@ -16,11 +16,13 @@ class WebServerManager():
         self._videoClient = gstVideoClient()
         self._websocket_list = []
         self._http_port = 8080
+        self._websocket_port = 5000
         self._websocket_server = None
         self._http_ip = "localhost"
         self._network_mask = "255.255.255.0"
         self._network_gateway = "192.168.1.1"
         self._thread_stop = False
+        self.lock = threading.Lock()
     
         self._videoClient.init()
         html_path = str(
@@ -32,30 +34,33 @@ class WebServerManager():
 
         self._http_handler = functools.partial(http.server.SimpleHTTPRequestHandler)
         self._http_thread = threading.Thread(target=self._run_http_server)
-        self._video_thread = threading.Thread(
-            target=self._run_get_video_frames, daemon=True
-        )
-        self._websocket_server_thread = threading.Thread(
-            target=self._run_websocket_server, daemon=True
-        )
+        self._video_thread = threading.Thread(target=self._run_get_video_frames, daemon=True)
+        self._websocket_thread = threading.Thread(target=self._run_websocket_server, daemon=True)
 
         self._http_thread.start()
         self._video_thread.start()
-        self._websocket_server_thread.start()
-        
+        self._websocket_thread.start()
 
     def _run_websocket_server(self):
         async def router(websocket, path):
-            if path == "/ws/video/":
-                print("hey")
+            print(path)
+            if path == "/ws/in/":
+                await self.webserver_routine(websocket, path)
+            elif path == "/ws/out/":
+                await self.readWs(websocket, path)
+            elif path == "/ws/video/":
                 await self.webserver_image(websocket, path)
+            else:
+                print("Socket not found!")
 
         async def websockets_main():
             async with websockets.serve(router, None, 5000, reuse_address=True, reuse_port=True) as self._websocket_server:
                 await asyncio.Future()
+        
         asyncio.run(websockets_main())
 
     def _run_get_video_frames(self):
+        while True:
             _, frame = self._videoClient.get_frame()
             if frame is not None:
                 _, im_arr = cv2.imencode(".jpg", frame)
@@ -78,20 +83,23 @@ class WebServerManager():
 
                     asyncio.run(send_main())
     
-    async def webserver_image(self, websocket: websockets.WebSocketServerProtocol, path):
-        self._websocket_list.append(websocket)
-    
     def _run_http_server(self):
         httpd = socketserver.TCPServer(("", self._http_port), self._http_handler)
         httpd.serve_forever()
-        self._trigger_reload = True
     
-    async def webserver_routine(self, websocket: websockets.WebSocketServerProtocol, path):
-        while True:
-            if self._trigger_reload:
-                await websocket.send("RELOAD")
-                self._trigger_reload = False
-            await asyncio.sleep(0.03)
+    async def webserver_image(self, websocket: websockets.WebSocketServerProtocol, path):
+        try:
+            self._websocket_list.append(websocket)
+            print("websocket appended")
+            while True:
+                if websocket.closed:
+                    self._websocket_list.remove(websocket)
+                    break
+                await asyncio.sleep(0.03)
 
+        except websockets.exceptions.ConnectionClosedError:
+            self._websocket_list.remove(websocket)
+            print("websocket failed!")
+    
 if __name__ == "__main__":
     web = WebServerManager()

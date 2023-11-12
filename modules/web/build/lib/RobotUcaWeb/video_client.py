@@ -60,24 +60,17 @@ class gstVideoClient(object):
             ts = time.time()
             self._frame, self._nframe = framec3, ts
 
-        size = len(self._queue)
-        if size > self._MAX_QUEUE_SIZE:
-            self._queue = self._queue[size - self._MAX_QUEUE_SIZE :]
-        self._queue.append((int(self._nframe), self._frame))
-
         buffer.unmap(map_info)
         return Gst.FlowReturn.OK
 
     def _launch_pipeline(self):
         Gst.init(None)
         self._pipeline = Gst.Pipeline.new("pipeline")
-        source = Gst.ElementFactory.make("shmsrc", "source")
-        source.set_property("do-timestamp", True)
-        source.set_property("is-live", True)
+        sourcecam = Gst.ElementFactory.make("v4l2src", "sourcecam")
+        sourcecam.set_property("device", "/dev/video0")
+        sourcecam.set_property("do-timestamp", True)
 
         caps = Gst.Caps.from_string("video/x-raw, width=1280, height=720, framerate=30/1, format=BGRx")
-
-        source.set_property("socket-path", f"/tmp/robotuca-socket-video")
         
         appsink = Gst.ElementFactory.make("appsink", "appsink")
         appsink.set_property("emit-signals", 1)
@@ -85,10 +78,11 @@ class gstVideoClient(object):
         appsink.set_property("max-buffers", 0)
         appsink.connect("new-sample", self._extract_frame, None)
 
-        self._pipeline.add(source)
+        # self._pipeline.add(source)
+        self._pipeline.add(sourcecam)
         self._pipeline.add(appsink)
         
-        pad = source.link_filtered(appsink, caps)
+        pad = sourcecam.link_filtered(appsink, caps)
         
         self._pipeline.set_state(Gst.State.PLAYING)
         
