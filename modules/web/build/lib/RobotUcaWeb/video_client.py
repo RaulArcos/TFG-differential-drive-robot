@@ -66,9 +66,13 @@ class gstVideoClient(object):
     def _launch_pipeline(self):
         Gst.init(None)
         self._pipeline = Gst.Pipeline.new("pipeline")
-        sourcecam = Gst.ElementFactory.make("v4l2src", "sourcecam")
-        sourcecam.set_property("device", "/dev/video0")
-        sourcecam.set_property("do-timestamp", True)
+        source = Gst.ElementFactory.make("shmsrc", "source")
+        source.set_property("do-timestamp", True)
+        source.set_property("is-live", True)
+
+        caps = Gst.Caps.from_string("video/x-raw, width=1280, height=720, framerate=30/1, format=BGRx")
+
+        source.set_property("socket-path", f"/tmp/robotuca-socket-video")
 
         caps = Gst.Caps.from_string("video/x-raw, width=1280, height=720, framerate=30/1, format=BGRx")
         
@@ -79,10 +83,10 @@ class gstVideoClient(object):
         appsink.connect("new-sample", self._extract_frame, None)
 
         # self._pipeline.add(source)
-        self._pipeline.add(sourcecam)
+        self._pipeline.add(source)
         self._pipeline.add(appsink)
         
-        pad = sourcecam.link_filtered(appsink, caps)
+        pad = source.link_filtered(appsink, caps)
         
         self._pipeline.set_state(Gst.State.PLAYING)
         
