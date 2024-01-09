@@ -44,6 +44,6 @@ setup(name=NAME,
    },
    data_files=[('html', ['RobotUcaWeb/html/css/robotuca.css', 
                   'RobotUcaWeb/html/index.html']),
-               ('html/js', ['RobotUcaWeb/html/js/robotuca-client.js', 'RobotUcaWeb/html/js/canvasjs.js'])],
+               ('html/js', ['RobotUcaWeb/html/js/robotuca-client.js', 'RobotUcaWeb/html/js/canvasjs.js', 'RobotUcaWeb/html/js/ros2d.js', 'RobotUcaWeb/html/js/background.js'])],
    include_package_data = True,
 )

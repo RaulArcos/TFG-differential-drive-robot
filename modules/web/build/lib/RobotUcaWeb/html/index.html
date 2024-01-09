@@ -2,24 +2,32 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/robotuca.css">
-   <title>RobotUCA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/robotuca.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>RobotUCA</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="col-lg-4 col-md-5 col-sm-6">
-            <div class="canvas-wrapper-general">
-                <canvas id="FrameCanvas"></canvas>
-            </div>
-        </div>
-    </div> 
+<div class="row-full">
+    <div class="col-md-4 col-lg-4 col-sm-4 video-column">
+        <canvas id="FrameCanvas"></canvas>
+    </div>
+    <div class="col-md-8 col-lg-8 col-sm-8 map-column" id="map-column">
+        <div id="map"></div>
+    </div>
+</div>
 
-    <script type="text/javascript" src="js/robotuca-client.js"></script>
-    <script type="text/javascript" src="js/canvasjs.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<!-- <script type="text/javascript" src="js/background.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/easeljs@1/lib/easeljs.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/eventemitter2@6/lib/eventemitter2.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js"></script>
+<script type="text/javascript" src="js/ros2d.js"></script>
+<script type="text/javascript" src="js/canvasjs.js"></script>
+<script type="text/javascript" src="js/robotuca-client.js"></script>
+
+
 
 </body> 
 </html>
