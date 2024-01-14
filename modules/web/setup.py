@@ -39,9 +39,9 @@ setup(name=NAME,
    license=LICENSE,
    packages=PACKAGES,
    zip_safe=False,
-   cmdclass={
-      'build_py': BuildPyCommand,
-   },
+   # cmdclass={
+   #    'build_py': BuildPyCommand,
+   # },
    data_files=[('html', ['RobotUcaWeb/html/css/robotuca.css', 
                   'RobotUcaWeb/html/index.html']),
                ('html/js', ['RobotUcaWeb/html/js/robotuca-client.js', 'RobotUcaWeb/html/js/canvasjs.js', 'RobotUcaWeb/html/js/ros2d.js', 'RobotUcaWeb/html/js/background.js'])],

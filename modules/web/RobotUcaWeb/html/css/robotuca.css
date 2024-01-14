@@ -5,8 +5,8 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #dbdbdb;
-  /* background-image: radial-gradient(circle at top right, rgb(255, 255, 255),       transparent),
-    radial-gradient(circle at 20% 80%, rgb(116, 116, 116), transparent) */
+  background-image: radial-gradient(circle at top right, rgb(255, 255, 255),       transparent),
+    radial-gradient(circle at 20% 80%, rgb(116, 116, 116), transparent)
 }
 
 .row-full{
@@ -17,28 +17,35 @@ body {
   height: 100%;
   padding-top: 2%;
   padding-bottom: 2%;
+  padding-left: 1%;
+  padding-right: 2%;
 }
 
 .video-column {
   display: flex;
   flex-direction: column;
+}
 
+.video-canvas{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .map-column {
   display: flex;
   flex-direction: column;
-  /* padding-right: 5%; */
-  /* margin-left: 0;
-  margin-bottom: 0%; */
-
 }
 
-/* canvas {
+.map{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.canvas-background {
   position: fixed;
+  height: 100vh;
+  width: 100vw;
 }
 
-a {
+a{
   position: absolute;
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -46,25 +53,4 @@ a {
 
 a:hover {
   color: #000000;
-} */
-
-/* .canvas-wrapper-general {
-  position: relative;
-  width: 100%;
-  padding-top: 0%;
-} */
-/* 
-.canvas-wrapper-general canvas {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: block;
-    padding-bottom: 0%;
-    image-rendering: crisp-edges;
 }
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-} */

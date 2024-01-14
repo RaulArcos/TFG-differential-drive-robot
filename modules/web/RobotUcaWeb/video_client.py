@@ -20,7 +20,7 @@ class gstVideoClient(object):
         self._keepAlive = 0
         self._pipeline = None
         self._timeout_id = None
-        self._consumer_thread = threading.Thread(target=self._launch_pipeline, daemon=True)
+        self._consumer_thread = threading.Thread(target=self._launch_pipeline)
 
     def init(self):
         try:
@@ -37,6 +37,7 @@ class gstVideoClient(object):
         return self._nframe, self._frame
         
     def _extract_frame(self, sink, _):
+        self._keepAlive = time.time()
         sample = sink.emit("pull-sample")
         
         if not sample:
@@ -89,6 +90,19 @@ class gstVideoClient(object):
         pad = source.link_filtered(appsink, caps)
         
         self._pipeline.set_state(Gst.State.PLAYING)
+        self._timeout_id = GLib.timeout_add_seconds(0.5, self.check_alive)
         
         self._loop = GLib.MainLoop()
         self._loop.run()
+        
+    def check_alive(self):
+        current_time = time.time()
+        if current_time - self._keepAlive > 2:
+            print("Current time", current_time, "keep alive", self._keepAlive)
+            print("Timeout: ", current_time - self._keepAlive)
+            print("Video lost, resetting pipeline")
+            self._pipeline.set_state(Gst.State.NULL)
+            self._pipeline.set_state(Gst.State.PLAYING)
+            self._keepAlive = current_time
+        
+        return True

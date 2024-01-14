@@ -28,7 +28,7 @@ body {
 .map-column {
   display: flex;
   flex-direction: column;
-  padding-right: 5%;
+  /* padding-right: 5%; */
   /* margin-left: 0;
   margin-bottom: 0%; */
 
