@@ -20,7 +20,7 @@ class gstVideoClient(object):
         self._keepAlive = 0
         self._pipeline = None
         self._timeout_id = None
-        self._consumer_thread = threading.Thread(target=self._launch_pipeline, daemon=True)
+        self._consumer_thread = threading.Thread(target=self._launch_pipeline)
 
     def init(self):
         try:

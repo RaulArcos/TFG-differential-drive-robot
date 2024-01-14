@@ -29,19 +29,19 @@
       />
     </inertial>
 
-    <collision name='collision'>
-      <origin xyz="0 0 0" rpy=" 0 0 0"/> 
-      <geometry>
-        <box size=".4 .2 .1"/>
-      </geometry>
-    </collision>
+  <collision name='collision'>
+  <origin xyz="0 0 0" rpy=" 0 0 0"/> 
+  <geometry>
+    <cylinder length="0.1" radius="0.6"/>
+  </geometry>
+  </collision>
 
-    <visual name='chassis_visual'>
-      <origin xyz="0 0 0" rpy=" 0 0 0"/>
-      <geometry>
-        <box size=".4 .2 .1"/>
-      </geometry>
-    </visual>
+  <visual name='chassis_visual'>
+    <origin xyz="0 0 0" rpy=" 0 0 0"/>
+    <geometry>
+      <cylinder length="0.1" radius="0.3"/>
+    </geometry>
+  </visual>
 
 
     <collision name='back_caster_collision'>

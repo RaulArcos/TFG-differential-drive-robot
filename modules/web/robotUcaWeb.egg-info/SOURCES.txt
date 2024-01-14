@@ -7,9 +7,12 @@ RobotUcaWeb/html/index.html
 RobotUcaWeb/html/css/robotuca.css
 RobotUcaWeb/html/js/background.js
 RobotUcaWeb/html/js/bootstrap.bundle.min.js
-RobotUcaWeb/html/js/canvasjs.js
-RobotUcaWeb/html/js/robotuca-client.js
-RobotUcaWeb/html/js/ros2d.js
+RobotUcaWeb/html/js/ros.js
+RobotUcaWeb/html/js/websocket.js
+RobotUcaWeb/html/js/ros_src/easeljs.min.js
+RobotUcaWeb/html/js/ros_src/eventemitter2.min.js
+RobotUcaWeb/html/js/ros_src/ros2d.js
+RobotUcaWeb/html/js/ros_src/roslib.min.js
 robotUcaWeb.egg-info/PKG-INFO
 robotUcaWeb.egg-info/SOURCES.txt
 robotUcaWeb.egg-info/dependency_links.txt
