@@ -11,15 +11,15 @@
   <remap from="scan" to="scan"/>
   <param name="odom_frame_id" value="odom"/>
   <param name="odom_model_type" value="diff-corrected"/>
-  <param name="base_frame_id" value="robot_footprint"/>
+  <param name="base_frame_id" value="base_link"/>
   <param name="global_frame_id" value="map"/>
 
   <param name="initial_pose_x" value="0"/>
   <param name="initial_pose_y" value="0"/>
 
   <param name="min_particles" value="25" />
-  <param name="max_particles" value="100" />
-  <param name="transform_tolerance" value="0.1" />
+  <param name="max_particles" value="500" />
+  <param name="transform_tolerance" value="0.3" />
 
   <param name="odom_alpha1" value="0.005" />
   <param name="odom_alpha2" value="0.005" />
@@ -31,13 +31,14 @@
   <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
   <remap from="scan" to="scan"/>
   <param name="base_global_planner" value="navfn/NavfnROS" />
-  <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
+  <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
   <rosparam file="$(find mobile_robot)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
   <rosparam file="$(find mobile_robot)/config/move_base_params.yaml" command="load" />
   <rosparam file="$(find mobile_robot)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
   <rosparam file="$(find mobile_robot)/config/local_costmap_params.yaml" command="load" />
   <rosparam file="$(find mobile_robot)/config/global_costmap_params.yaml" command="load" />
-  <rosparam file="$(find mobile_robot)/config/base_local_planner_params.yaml" command="load" />
+  <!-- <rosparam file="$(find mobile_robot)/config/base_local_planner_params.yaml" command="load" /> -->
+  <!-- <rosparam file="$(find mobile_robot)/config/dwa_local_planner_params.yaml" command="load" /> -->
 
   </node>
 

@@ -2,7 +2,7 @@
 <!-- Launch slam_gmapping node with adjusted parameters -->
 <launch>
   <arg name="scan_topic"  default="/scan" />
-  <arg name="base_frame"  default="robot_footprint"/>
+  <arg name="base_frame"  default="base_link"/>
   <arg name="odom_frame"  default="odom"/>
 
   <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">

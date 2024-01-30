@@ -19,6 +19,7 @@ function init() {
     var gridClient = new ROS2D.OccupancyGridClient({
     ros : ros,
     rootObject : viewer.scene,
+    viewer : viewer,
     continuous: true
     });
 
@@ -27,39 +28,66 @@ function init() {
     viewer.shift(gridClient.currentGrid.pose.position.x, gridClient.currentGrid.pose.position.y);
     });
 
-    var robotMarker = new ROS2D.NavigationArrow({
-        size : 0.25,
-        strokeSize : 0.05,
-        pulse: true,
-        fillColor: createjs.Graphics.getRGB(255, 0, 0, 0.65)
+    var robotMarker = new ROS2D.ArrowShape({
+        size: 12,
+        strokeSize: 1,
+        fillColor: createjs.Graphics.getRGB(255, 128, 0, 0.66),
+        pulse: true
     });
+      
+    // Function to update the robot's position on the map
+    function updateRobotPosition(x, y, theta) {
+    robotMarker.x = x;
+    robotMarker.y = -y;
+    robotMarker.rotation = theta;
+    viewer.scene.addChild(robotMarker);
+    }
+    
+    // Function to handle map click events
+    function onMapClicked(event) {
+    var local = viewer.scene.globalToLocal(event.stageX, event.stageY);
+    
+    // Convert to ROS coordinates
+    var rosX = local.x;
+    var rosY = -local.y;
+    
+    // Send these coordinates to the robot
+    sendPositionCommand(rosX, rosY);
+    }
+    
+    // Function to send position commands to the robot
+    function sendPositionCommand(x, y) {
+    var goal = new ROSLIB.Goal({
+        actionClient : actionClient,
+        goalMessage : {
+        target_pose : {
+            header : {
+            frame_id : 'map'
+            },
+            pose : {
+            position : { x: x, y: y, z: 0 },
+            orientation : { x: 0, y: 0, z: 0, w: 1 }
+            }
+        }
+        }
+    });
+    console.log('Sending goal')
+    goal.send();
+    }
+    
+    viewer.scene.addEventListener('stagemousedown', onMapClicked);
 
-    gridClient.rootObject.addChild(robotMarker);
-
-    var tfClient = new ROSLIB.TFClient({
-        ros : ros,
-        fixedFrame : 'map',
-        angularThres : 0.01,
-        transThres : 0.01
-     });
-
-    function tf_sub_func(tf) {
-        console.log(tf);
-        robotMarker.x = tf.translation.x;
-        robotMarker.y = -tf.translation.y;
-        robotMarker.rotation = new THREE.Euler().setFromQuaternion(new THREE.Quaternion(
-              tf.rotation.x,
-              tf.rotation.y,
-              tf.rotation.z,
-              tf.rotation.w
-              )
-          ).z * -180 / 3.14159;
-      }
-
-    tfClient.subscribe('base_footprint', tf_sub_func);
+    var poseListener = new ROSLIB.Topic({
+    ros : ros,
+    name : '/odom',
+    messageType : 'Odometry'
+    });
+    
+    poseListener.subscribe(function(pose) {
+    updateRobotPosition(odom.position.x, pose.position.y, pose.orientation.z);
+    });
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
     init();
 });

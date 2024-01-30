@@ -5,7 +5,7 @@
   <arg name="scan_topic" default="/scan"/>
   <arg name="sensor_frame" default="laser"/>
   <arg name="odom_frame" default="odom"/>
-  <arg name="base_frame" default="robot_footprint"/>
+  <arg name="base_frame" default="base_link"/>
   <arg name="global_frame" default="map"/>
 
 

@@ -6,9 +6,12 @@
   <!-- Real robot -->
   <!---->
   <arg name="ticks_per_meter" value="100" />
-  <arg name="wheel_separation" value="0.2" />
+  <arg name="wheel_separation" value="0.54" />
 
+  <include file="$(find mobile_robot)/launch/robot_description.launch" pass_all_args="true"/>
   <include file="$(find rf2o_laser_odometry)/launch/rf2o_laser_odometry.launch" pass_all_args="true"/>
+  <include file="$(find rplidar_ros)/launch/rplidar.launch" pass_all_args="true"/>
+  
 
   
 </launch>
