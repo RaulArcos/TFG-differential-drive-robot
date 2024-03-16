@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(teb_local_planner_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/robot/robotuca/devel/include;/home/robot/robotuca/src/teb_local_planner/include;/usr/include/suitesparse;/usr/local/include/g2o " STREQUAL " ")
+if(NOT "/home/robot/robotuca/devel/include;/home/robot/robotuca/src/teb_local_planner/include;/usr/include/suitesparse;/opt/ros/noetic/include/g2o " STREQUAL " ")
   set(teb_local_planner_INCLUDE_DIRS "")
-  set(_include_dirs "/home/robot/robotuca/devel/include;/home/robot/robotuca/src/teb_local_planner/include;/usr/include/suitesparse;/usr/local/include/g2o")
+  set(_include_dirs "/home/robot/robotuca/devel/include;/home/robot/robotuca/src/teb_local_planner/include;/usr/include/suitesparse;/opt/ros/noetic/include/g2o")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/teb_local_planner " STREQUAL " ")
@@ -116,7 +116,7 @@ if(NOT "/home/robot/robotuca/devel/include;/home/robot/robotuca/src/teb_local_pl
   endforeach()
 endif()
 
-set(libraries "teb_local_planner;amd;btf;camd;ccolamd;cholmod;colamd;cxsparse;klu;umfpack;spqr;/usr/local/lib/libg2o_csparse_extension.so;/usr/local/lib/libg2o_core.so;/usr/local/lib/libg2o_stuff.so;/usr/local/lib/libg2o_types_slam2d.so;/usr/local/lib/libg2o_types_slam3d.so;/usr/local/lib/libg2o_solver_cholmod.so;/usr/local/lib/libg2o_solver_pcg.so;/usr/local/lib/libg2o_solver_csparse.so;/usr/local/lib/libg2o_incremental.so")
+set(libraries "teb_local_planner;amd;btf;camd;ccolamd;cholmod;colamd;cxsparse;klu;umfpack;spqr;/opt/ros/noetic/lib/libg2o_csparse_extension.so;/opt/ros/noetic/lib/libg2o_core.so;/opt/ros/noetic/lib/libg2o_stuff.so;/opt/ros/noetic/lib/libg2o_types_slam2d.so;/opt/ros/noetic/lib/libg2o_types_slam3d.so;/opt/ros/noetic/lib/libg2o_solver_cholmod.so;/opt/ros/noetic/lib/libg2o_solver_pcg.so;/opt/ros/noetic/lib/libg2o_solver_csparse.so;/opt/ros/noetic/lib/libg2o_incremental.so")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")

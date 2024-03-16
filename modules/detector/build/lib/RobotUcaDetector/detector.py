@@ -2,13 +2,13 @@ import yolov7
 import cv2
 
 class RobotUcaDetector:
-    def __init__(self, model_path='/etc/robotuca/models/yolov7.pt', device = '0', trace=False, size=640, half=False):
+    def __init__(self, model_path='/etc/robotuca/models/yolov7.pt', device = '0', trace=False, size=416, half=False):
         self._model = yolov7.load(model_path, device, trace=trace, size=size, hf_model=half)
         self._model.conf = 0.25
         self._model.iou = 0.45
     
     def detect(self, img, size = 720, augment = True):
-        results = self._model(img, size=720, augment=True)
+        results = self._model(img, size=416, augment=False)
         predictions = results.pred[0]
         boxes = predictions[:, :4]
         scores = predictions[:, 4]

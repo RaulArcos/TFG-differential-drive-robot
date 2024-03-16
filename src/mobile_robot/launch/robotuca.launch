@@ -10,40 +10,41 @@
     <arg name="wheel_separation" value="0.54" />
 
     <!-- Map Server Node -->
-    <arg name="map_file" default="$(find mobile_robot)/maps/map2024.yaml"/>
+    <arg name="map_file" default="$(find mobile_robot)/maps/map2024v2.yaml"/>
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
     <node pkg="amcl" type="amcl" name="amcl">
-        <param name="odom_model_type"           value="diff"/>
+        <param name="odom_model_type"           value="diff-corrected"/>
         <param name="odom_alpha5"               value="0.1"/>
-        <param name="gui_publish_rate"          value="10.0"/>
-        <param name="laser_max_beams"             value="1000"/>
-        <param name="laser_max_range"           value="12.0"/>
-        <param name="min_particles"             value="50"/>
+        <param name="gui_publish_rate"          value="10"/>
+        <param name="laser_max_beams"             value="360"/>
+        <param name="laser_max_range"           value="8.0"/>
+        <param name="min_particles"             value="100"/>
         <param name="max_particles"             value="200"/>
-        <param name="kld_err"                   value="0.05"/>
+        <param name="kld_err"                   value="0.01"/>
         <param name="kld_z"                     value="0.99"/>
-        <param name="odom_alpha1"               value="0.2"/>
-        <param name="odom_alpha2"               value="0.2"/>
+        <param name="odom_alpha1"               value="0.005"/>
+        <param name="odom_alpha2"               value="0.005"/>
         <!-- translation std dev, m -->
-        <param name="odom_alpha3"               value="0.2"/>
-        <param name="odom_alpha4"               value="0.2"/>
-        <param name="laser_z_hit"               value="0.5"/>
+        <param name="odom_alpha3"               value="0.005"/>
+        <param name="odom_alpha4"               value="0.005"/>
+        <param name="laser_z_hit"               value="0.9"/>
         <param name="laser_z_short"             value="0.05"/>
         <param name="laser_z_max"               value="0.05"/>
-        <param name="laser_z_rand"              value="0.5"/>
-        <param name="laser_sigma_hit"           value="0.2"/>
+        <param name="laser_z_rand"              value="0.1"/>
+        <param name="laser_sigma_hit"           value="0.1"/>
         <param name="laser_lambda_short"        value="0.1"/>
         <param name="laser_model_type"          value="likelihood_field"/>
         <!-- <param name="laser_model_type" value="beam"/> -->
-        <param name="laser_likelihood_max_dist" value="2.0"/>
+        <param name="laser_likelihood_max_dist" value="3.0"/>
         <param name="update_min_d"              value="0.25"/>
         <param name="update_min_a"              value="0.2"/>
         <param name="odom_frame_id"             value="odom"/>
         <param name="base_frame_id"             value="base_link"/>
-        <param name="resample_interval"         value="1"/>
+        <param name="global_frame_id"           value="map"/>
+        <param name="resample_interval"         value="2"/>
         <!-- Increase tolerance because the computer can get quite busy -->
-        <param name="transform_tolerance"       value="0.3"/>
+        <param name="transform_tolerance"       value="0.5"/>
         <param name="recovery_alpha_slow"       value="0.0"/>
         <param name="recovery_alpha_fast"       value="0.0"/>
         <param name="initial_pose_x"            value="$(arg initial_pose_x)"/>
@@ -54,7 +55,7 @@
 
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
         <param name="base_global_planner" value="navfn/NavfnROS" />
-        <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS" />
+        <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
 
         <rosparam file="$(find mobile_robot)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
         <rosparam file="$(find mobile_robot)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
@@ -63,8 +64,8 @@
         <rosparam file="$(find mobile_robot)/config/global_costmap_params.yaml" command="load" />
         <!-- <rosparam file="$(find mobile_robot)/config/dwa_local_planner_params.yaml" command="load" /> -->
         <rosparam file="$(find mobile_robot)/config/navfnros_planner.yaml" command="load" />
-        <rosparam file="$(find mobile_robot)/config/base_local_planner.yaml" command="load" />
-
+        <!-- <rosparam file="$(find mobile_robot)/config/base_local_planner.yaml" command="load" /> -->
+        <rosparam file="$(find mobile_robot)/config/teb_local_planner_params.yaml" command="load" />
     </node>
 
     <include file="$(find mobile_robot)/launch/robot_description.launch" pass_all_args="true"/>

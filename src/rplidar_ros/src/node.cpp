@@ -84,8 +84,7 @@ void publish_scan(ros::Publisher *pub,
         for (size_t i = 0; i < node_count; i++) {
             float read_value = (float) nodes[i].distance_q2/4.0f/1000;
             if (read_value == 0.0)
-                // scan_msg.ranges[i] = std::numeric_limits<float>::infinity();
-                scan_msg.ranges[i] = 8;
+                scan_msg.ranges[i] = std::numeric_limits<float>::infinity();
             else
                 scan_msg.ranges[i] = read_value;
             scan_msg.intensities[i] = (float) (nodes[i].sync_quality >> 2);

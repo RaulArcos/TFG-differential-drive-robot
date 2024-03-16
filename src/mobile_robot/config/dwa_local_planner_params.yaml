@@ -25,7 +25,7 @@ DWAPlannerROS:
 
 # Forward Simulation Parameters
   sim_time: 3       # 1.7
-  vx_samples: 6       # 3
+  vx_samples: 10      # 3
   vy_samples: 0       # diff drive robot
   vtheta_samples: 20  # 20
 
@@ -40,7 +40,6 @@ DWAPlannerROS:
 
 # Oscillation Prevention Parameters
   oscillation_reset_dist: 0.05  # 0.05   - how far to travel before resetting oscillation flags
-
   track_unknown_space: true
 
 # Differential-drive robot configuration - necessary?

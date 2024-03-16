@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
         - /Map1
+        - /LaserScan1
         - /Path1
         - /Pose1
         - /Map2
@@ -117,7 +118,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.009999999776482582
+      Size (m): 0.05000000074505806
       Style: Flat Squares
       Topic: /scan
       Unreliable: false
@@ -179,10 +180,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        chassis:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
           Value: true
         hokuyo:
           Alpha: 1
@@ -203,10 +200,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        robot_footprint:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -276,7 +269,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.7599036693573
+      Distance: 6.88353967666626
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -284,9 +277,9 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 3.534005880355835
-        Y: 2.463850259780884
-        Z: 0.6703563332557678
+        X: 3.279694080352783
+        Y: 1.8184220790863037
+        Z: 1.2571052312850952
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
@@ -312,5 +305,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1536
-  X: 1536
+  X: 0
   Y: 23
