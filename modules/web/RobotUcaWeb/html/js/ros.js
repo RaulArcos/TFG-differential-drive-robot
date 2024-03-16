@@ -11,80 +11,43 @@ function init() {
     });
 
     var viewer = new ROS2D.Viewer({
-    divID : 'map',
+    divID : 'nav',
     width : elementWidth - 30,
     height : elementHeight
     });
 
-    var gridClient = new ROS2D.OccupancyGridClient({
-    ros : ros,
-    rootObject : viewer.scene,
-    viewer : viewer,
-    continuous: true
+    var nav = new NAV2D.OccupancyGridClientNav({
+        ros: ros,
+        rootObject: viewer.scene,
+        viewer: viewer,
+        serverName: '/move_base',
+        continuous: true
     });
 
-    gridClient.on('change', function() {
-    viewer.scaleToDimensions(gridClient.currentGrid.width, gridClient.currentGrid.height);
-    viewer.shift(gridClient.currentGrid.pose.position.x, gridClient.currentGrid.pose.position.y);
+    var cmdVelListener = new ROSLIB.Topic({
+        ros: ros,
+        name: '/cmd_vel',
+        messageType: 'geometry_msgs/Twist'
     });
 
-    var robotMarker = new ROS2D.ArrowShape({
-        size: 12,
-        strokeSize: 1,
-        fillColor: createjs.Graphics.getRGB(255, 128, 0, 0.66),
-        pulse: true
-    });
-      
-    // Function to update the robot's position on the map
-    function updateRobotPosition(x, y, theta) {
-    robotMarker.x = x;
-    robotMarker.y = -y;
-    robotMarker.rotation = theta;
-    viewer.scene.addChild(robotMarker);
-    }
+    cmdVelListener.subscribe(function(message) {
+        // Assuming message.linear.x and message.angular.z contain the speeds
+        var linearSpeed = message.linear.x;
+        var angularSpeed = message.angular.z;
     
-    // Function to handle map click events
-    function onMapClicked(event) {
-    var local = viewer.scene.globalToLocal(event.stageX, event.stageY);
+        // Add data to the chart
+        velocityChart.data.labels.push(new Date().toISOString()); // Add current time as label
+        velocityChart.data.datasets[0].data.push(linearSpeed); // Add linear speed
+        velocityChart.data.datasets[1].data.push(angularSpeed); // Add angular speed
     
-    // Convert to ROS coordinates
-    var rosX = local.x;
-    var rosY = -local.y;
-    
-    // Send these coordinates to the robot
-    sendPositionCommand(rosX, rosY);
-    }
-    
-    // Function to send position commands to the robot
-    function sendPositionCommand(x, y) {
-    var goal = new ROSLIB.Goal({
-        actionClient : actionClient,
-        goalMessage : {
-        target_pose : {
-            header : {
-            frame_id : 'map'
-            },
-            pose : {
-            position : { x: x, y: y, z: 0 },
-            orientation : { x: 0, y: 0, z: 0, w: 1 }
-            }
+        // Keep the number of data points manageable
+        if(velocityChart.data.labels.length > 100) {
+            velocityChart.data.labels.shift(); // Remove the oldest label
+            velocityChart.data.datasets[0].data.shift(); // Remove the oldest linear speed data
+            velocityChart.data.datasets[1].data.shift(); // Remove the oldest angular speed data
         }
-        }
-    });
-    console.log('Sending goal')
-    goal.send();
-    }
     
-    viewer.scene.addEventListener('stagemousedown', onMapClicked);
-
-    var poseListener = new ROSLIB.Topic({
-    ros : ros,
-    name : '/odom',
-    messageType : 'Odometry'
-    });
-    
-    poseListener.subscribe(function(pose) {
-    updateRobotPosition(odom.position.x, pose.position.y, pose.orientation.z);
+        velocityChart.update();
     });
 }
 

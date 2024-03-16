@@ -10,21 +10,26 @@
     <script src="./js/ros_src/eventemitter2.min.js"></script>
     <script src="./js/ros_src/roslib.min.js"></script>
     <script src="./js/ros_src/ros2d.js"></script>
+    <script src="./js/ros_src/nav2d.js"></script>
+    <script src="./js/charts_src/chart.js"></script>
+    <script src="./js/charts_src/chart-plugin-streaming.js"></script>
+    <script src="./js/charts_src/chart-adapter-date-fns.js"></script>
+
     <title>RobotUCA</title>
 </head>
 
 <body>
-<canvas id="canvas" class="canvas-background"></canvas>
 <div class="row-full">
     <div class="col-md-4 col-lg-4 col-sm-4 video-column">
-        <canvas id="FrameCanvas" class="video-canvas"></canvas>
+            <canvas id="FrameCanvas" class="video-canvas"></canvas>
+            <canvas id="velocityChart" class="chart-canvas"></canvas>
     </div>
     <div class="col-md-8 col-lg-8 col-sm-8 map-column" id="map-column">
-        <div class="map" id="map"></div>
+        <div class="map" id="nav"></div>
     </div>
 </div>
 
-<script type="text/javascript" src="js/background.js"></script>
+<script src="./js/telemetry.js"></script>
 <script type="text/javascript" src="js/websocket.js"></script>
 <script src="js/ros.js"></script>
 
