@@ -2,7 +2,8 @@ import asyncio
 import base64
 import cv2
 import threading
-from RobotUcaWeb.video_client import gstVideoClient
+# from RobotUcaWeb.video_client import gstVideoClient
+from video_client import gstVideoClient
 import websockets
 import socketserver
 import os

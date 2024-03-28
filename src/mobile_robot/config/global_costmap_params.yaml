@@ -5,3 +5,9 @@ global_costmap:
    publish_frequency: 0.5
    static_map: true
    transform_tolerance: 0.5
+
+   plugins:
+    - {name: static_layer, type: "costmap_2d::StaticLayer"}
+    - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
+   #  - {name: dynamic_obstacle_layer, type: "dynamic_obstacle_layer::DynamicLayer"} # Uncomment to apply dynamic_obstacle_layer
+    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}

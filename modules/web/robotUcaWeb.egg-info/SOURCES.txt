@@ -5,7 +5,6 @@ RobotUcaWeb/video_client.py
 RobotUcaWeb/webServer.py
 RobotUcaWeb/html/index.html
 RobotUcaWeb/html/css/robotuca.css
-RobotUcaWeb/html/js/background.js
 RobotUcaWeb/html/js/bootstrap.bundle.min.js
 RobotUcaWeb/html/js/ros.js
 RobotUcaWeb/html/js/websocket.js

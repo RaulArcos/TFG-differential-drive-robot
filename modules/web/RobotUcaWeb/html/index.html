@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/robotuca.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="./js/ros_src/easeljs.min.js"></script>
     <script src="./js/ros_src/eventemitter2.min.js"></script>
     <script src="./js/ros_src/roslib.min.js"></script>
@@ -14,6 +17,9 @@
     <script src="./js/charts_src/chart.js"></script>
     <script src="./js/charts_src/chart-plugin-streaming.js"></script>
     <script src="./js/charts_src/chart-adapter-date-fns.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src ="./js/nipple.js"></script>
+    
 
     <title>RobotUCA</title>
 </head>
@@ -21,19 +27,48 @@
 <body>
 <div class="row-full">
     <div class="col-md-4 col-lg-4 col-sm-4 video-column">
-            <canvas id="FrameCanvas" class="video-canvas"></canvas>
-            <canvas id="velocityChart" class="chart-canvas"></canvas>
+        <canvas id="FrameCanvas" class="video-canvas"></canvas>
+        <canvas id="velocityChart" class="chart-canvas"></canvas>
+        <h3>Control</h3>
+        <div class="control-panel-text flex-row">
+            <div class="d-flex"><h5>Mode</h5></div>
+            <div class="d-flex"><h5>Status</h5></div>
+            <div class="d-flex"><h5>Actions</h5></div>
+          </div>
+        <div id="control-panel" class="control-panel flex-row">
+            <div class="d-flex mode-button-column">
+                
+                <button id="toggleIconBtn" class="icon-btn">
+                    <i class="fa-solid fa-microchip fa-fade"></i>
+                </button>
+            </div>
+            <div class="d-flex status-column">
+                
+                <div id="status-box" class="status-box">Waiting...</div>
+            </div>
+            <div class="d-flex controls-column">
+                <div id="button-menu" class="menu">
+                    <button id="set-location" class="icon-btn control-button-menu set-location-button"><i class="fas fa-map-marker-alt"></i> Set Location</button>
+                    <button id="set-goal" class="icon-btn control-button-menu set-goal-button"><i class="fas fa-flag-checkered"></i> Set Goal</button>
+                    <button id="stop" class="icon-btn control-button-menu stop-button"><i class="fas fa-stop"></i> Stop</button>
+                </div>
+
+                <!-- Menu for Joystick -->
+                <div id="joystick-menu" class="menu">
+                    <div class="joystick" id="joystick"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-md-8 col-lg-8 col-sm-8 map-column" id="map-column">
         <div class="map" id="nav"></div>
     </div>
 </div>
 
+<script src="./js/control-panel.js"></script>
 <script src="./js/telemetry.js"></script>
 <script type="text/javascript" src="js/websocket.js"></script>
 <script src="js/ros.js"></script>
-
-
 
 </body> 
 </html>

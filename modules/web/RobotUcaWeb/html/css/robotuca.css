@@ -26,11 +26,27 @@ body {
   flex-direction: column;
 }
 
+.mode-button-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.controls-column{
+  display: flex;
+  flex-direction: column;
+}
+
 .video-canvas{
   filter: drop-shadow(5px 5px 10px black);
+  margin-bottom: 5%;
 }
 
 .map-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-column{
   display: flex;
   flex-direction: column;
 }
@@ -47,6 +63,119 @@ body {
 
 .chart-canvas{
   display:flex;
-  padding-top: 5%;
-  padding-bottom: 2%;
+  padding-top: 0%;
+  padding-bottom: 10%;
+  margin-bottom: -5%;
+}
+
+ svg {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  
+ }
+ 
+.icon {
+  cursor: pointer;
+} 
+
+.icons-container {
+  width: 100%; /* Ensure the container takes the full width of its parent */
+  padding: 10px 0; /* Add some padding above and below the icons */
+  height: 50%;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  padding-left: 5%;
+  padding-right: 10%;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-btn {
+  font-size: 5vw;
+  padding: 0;
+  border: none;
+  color: rgb(72, 72, 72);
+  cursor: pointer;
+  background: none;
+}
+
+.icon-btn:focus {
+  outline: none;
+  filter: drop-shadow(5px 5px 10px black);
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h5 {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-button-menu{
+  flex: 1; /* This will make all buttons the same height */
+  margin: 5px 0; /* Optional: Adds some space between buttons */
+  width: 140%; /* Ensures all buttons are the same width */
+  display: block;
+  margin: 0% auto;
+  padding: 5% 5%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8vw;;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.set-location-button{
+  background-color: rgb(255, 213, 105);
+}
+
+.set-goal-button{
+  background-color: rgb(85, 184, 255);
+}
+
+.stop-button{
+  background-color: rgb(255, 115, 115);
+}
+
+.status-box{
+  flex: 2; /* This will make all buttons the same height */
+  margin: 5px 0; /* Optional: Adds some space between buttons */
+  width: 120%; /* Ensures all buttons are the same width */
+  display: block;
+  margin: 0% auto;
+  padding: 5% 5%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1vw;;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(255, 84, 84);
+}
+
+.control-panel-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0%;
+  margin-bottom: -2%;
+  padding-left: 8%;
+  padding-right: 10%;
+  width: 100%;
+  height: 100%;
 }

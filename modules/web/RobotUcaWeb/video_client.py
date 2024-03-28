@@ -56,10 +56,11 @@ class gstVideoClient(object):
         data = np.ndarray(shape=(height, width, 4), dtype=np.uint8, buffer=map_info.data)
 
         framec3 = cv.cvtColor(data, cv.COLOR_BGRA2BGR)
-
-        if framec3.size > 0:
+        framec3reduced = cv.resize(framec3, (640, 360), interpolation=cv.INTER_AREA)
+  
+        if framec3reduced.size > 0:
             ts = time.time()
-            self._frame, self._nframe = framec3, ts
+            self._frame, self._nframe = framec3reduced, ts
 
         buffer.unmap(map_info)
         return Gst.FlowReturn.OK
