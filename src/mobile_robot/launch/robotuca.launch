@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
-
     <!-- Easy acces params -->
     <arg name="initial_pose_x" default="0.0"/>
     <arg name="initial_pose_y" default="0.0"/>
@@ -17,7 +16,7 @@
         <param name="odom_model_type"           value="diff-corrected"/>
         <param name="odom_alpha5"               value="0.1"/>
         <param name="gui_publish_rate"          value="10"/>
-        <param name="laser_max_beams"             value="360"/>
+        <param name="laser_max_beams"           value="360"/>
         <param name="laser_max_range"           value="8.0"/>
         <param name="min_particles"             value="100"/>
         <param name="max_particles"             value="200"/>
