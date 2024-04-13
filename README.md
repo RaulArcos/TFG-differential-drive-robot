@@ -28,7 +28,6 @@ I will provide comprehensive documentation, including setup instructions, hardwa
 
 - Raúl Arcos Herrera: Project Developer
 - Arturo Morgado: Supervisor
-- Miguel Ángel López: Supervisor
 
 ## Acknowledgments
 
