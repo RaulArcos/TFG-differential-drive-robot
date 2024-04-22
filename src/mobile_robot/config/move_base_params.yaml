@@ -4,10 +4,10 @@ controller_frequency: 8
 controller_patience: 1.0
 
 planner_frequency: 8
-planner_patience: 3.0
+planner_patience: 1.0
 
-oscillation_timeout: 3.0
-oscillation_distance: 1.0
+oscillation_timeout: 1.0
+oscillation_distance: 0.2
 
 base_local_planner: "teb_local_planner/TebLocalPlannerROS"
 base_global_planner: "navfn/NavfnROS"

@@ -133,15 +133,15 @@ class PeopleFollowerNode:
                 
                 # person_x, person_y = self.calculate2Dpoint(angle_center,  box_distance)
                 
-            #     person = Marker(
-            #         header=header,
-            #         id=idx,
-            #         type=Marker.SPHERE,
-            #         action=Marker.ADD,
-            #         pose=Pose(position=Point(x=person_x, y=person_y, z=0.0)),
-            #         scale=Point(x=0.2, y=0.2, z=0.1),
-            #         color=ColorRGBA(r=0.0, g=1.0, b=0.0, a=1.0),
-            #     )
+                # person = Marker(
+                #     header=header,
+                #     id=idx,
+                #     type=Marker.SPHERE,
+                #     action=Marker.ADD,
+                #     pose=Pose(position=Point(x=person_x, y=person_y, z=0.0)),
+                #     scale=Point(x=0.2, y=0.2, z=0.1),
+                #     color=ColorRGBA(r=0.0, g=1.0, b=0.0, a=1.0),
+                # )
                 person_x = 0
                 person_y = 0
                 nearest_target.append([box_distance, angle_center, person_x, person_y])

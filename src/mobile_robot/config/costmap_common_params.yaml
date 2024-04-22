@@ -5,10 +5,10 @@ max_obstacle_height: 0.60
 obstacle_range: 5
 raytrace_range: 8
 
-robot_radius: 0.28
+robot_radius: 0.24
 
-inflation_radius: 0.31
-cost_scaling_factor: 6.0
+inflation_radius: 0.35
+cost_scaling_factor: 3.0
 
 map_type: voxel
 
