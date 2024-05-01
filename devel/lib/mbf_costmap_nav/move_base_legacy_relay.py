@@ -3,7 +3,7 @@
 # generated from catkin/cmake/template/script.py.in
 # creates a relay to a python script source file, acting as that file.
 # The purpose is that of a symlink
-python_script = '/home/robot/robotuca/src/move_base_flex/mbf_costmap_nav/scripts/move_base_legacy_relay.py'
+python_script = '/home/robot/rah01/src/move_base_flex/mbf_costmap_nav/scripts/move_base_legacy_relay.py'
 with open(python_script, 'r') as fh:
     context = {
         '__builtins__': __builtins__,

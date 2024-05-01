@@ -67,14 +67,14 @@ set(mbf_utility_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(mbf_utility_SOURCE_PREFIX /home/robot/robotuca/src/move_base_flex/mbf_utility)
-  set(mbf_utility_DEVEL_PREFIX /home/robot/robotuca/devel)
+  set(mbf_utility_SOURCE_PREFIX /home/robot/rah01/src/move_base_flex/mbf_utility)
+  set(mbf_utility_DEVEL_PREFIX /home/robot/rah01/devel)
   set(mbf_utility_INSTALL_PREFIX "")
   set(mbf_utility_PREFIX ${mbf_utility_DEVEL_PREFIX})
 else()
   set(mbf_utility_SOURCE_PREFIX "")
   set(mbf_utility_DEVEL_PREFIX "")
-  set(mbf_utility_INSTALL_PREFIX /home/robot/robotuca/install)
+  set(mbf_utility_INSTALL_PREFIX /home/robot/rah01/install)
   set(mbf_utility_PREFIX ${mbf_utility_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(mbf_utility_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/robot/robotuca/src/move_base_flex/mbf_utility/include " STREQUAL " ")
+if(NOT "/home/robot/rah01/src/move_base_flex/mbf_utility/include " STREQUAL " ")
   set(mbf_utility_INCLUDE_DIRS "")
-  set(_include_dirs "/home/robot/robotuca/src/move_base_flex/mbf_utility/include")
+  set(_include_dirs "/home/robot/rah01/src/move_base_flex/mbf_utility/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/move_base_flex/mbf_utility " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/robot/robotuca/src/move_base_flex/mbf_utility/include " STREQUAL "
         message(FATAL_ERROR "Project 'mbf_utility' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'mbf_utility' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robot/robotuca/src/move_base_flex/mbf_utility/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'mbf_utility' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robot/rah01/src/move_base_flex/mbf_utility/${idir}'.  ${_report}")
     endif()
     _list_append_unique(mbf_utility_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robot/robotuca/devel/lib;/home/robot/robotuca/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/robot/rah01/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

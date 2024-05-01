@@ -1,4 +1,4 @@
-prefix=/home/robot/robotuca/devel
+prefix=/home/robot/rah01/devel
 
 Name: hector_trajectory_server
 Description: Description of hector_trajectory_server

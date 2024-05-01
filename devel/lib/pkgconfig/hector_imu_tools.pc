@@ -1,4 +1,4 @@
-prefix=/home/robot/robotuca/devel
+prefix=/home/robot/rah01/devel
 
 Name: hector_imu_tools
 Description: Description of hector_imu_tools

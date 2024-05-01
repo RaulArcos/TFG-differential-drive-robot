@@ -1,1 +1,4 @@
 build/
+modules/detector/build/
+modules/web/build/
+modules/video/build/

@@ -1,8 +1,8 @@
-prefix=/home/robot/robotuca/devel
+prefix=/home/robot/rah01/devel
 
 Name: openslam_gmapping
 Description: Description of openslam_gmapping
 Version: 0.2.1
-Cflags: -I/home/robot/robotuca/src/openslam_gmapping/include -I/home/robot/robotuca/devel/include
+Cflags: -I/home/robot/rah01/src/openslam_gmapping/include -I/home/robot/rah01/devel/include
 Libs: -L${prefix}/lib -lutils -lsensor_base -lsensor_odometry -lsensor_range -llog -lconfigfile -lscanmatcher -lgridfastslam
 Requires: 

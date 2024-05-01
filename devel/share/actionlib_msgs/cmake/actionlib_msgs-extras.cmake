@@ -4,7 +4,7 @@ find_package(genmsg REQUIRED)
 include(CMakeParseArguments)
 
 # program in develspace
-set(GENACTION_BIN "/home/robot/robotuca/src/common_msgs/actionlib_msgs/scripts/genaction.py")
+set(GENACTION_BIN "/home/robot/rah01/src/common_msgs/actionlib_msgs/scripts/genaction.py")
 
 macro(add_action_files)
   cmake_parse_arguments(ARG "NOINSTALL" "DIRECTORY" "FILES" ${ARGN})

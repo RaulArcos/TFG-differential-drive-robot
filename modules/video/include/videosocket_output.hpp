@@ -4,7 +4,7 @@
 #include "common.hpp"
 #include <gst/gst.h>
 
-namespace robotuca{
+namespace rah01{
     class VideoSocketOutput{
         public:
             VideoSocketOutput(const Resolution& res);

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16.3)
 
 project(VideoApp
         VERSION 0.9.4
-        DESCRIPTION "RobotUcaVideo Module"
+        DESCRIPTION "RAH01Video Module"
         LANGUAGES CXX)
 
 add_subdirectory (src) 
@@ -10,7 +10,7 @@ add_subdirectory (src)
 ##############################################################################
 
 set(CPACK_GENERATOR "DEB")
-set(CPACK_DEBIAN_PACKAGE_NAME "robotUcaVideo")
+set(CPACK_DEBIAN_PACKAGE_NAME "rah01Video")
 message(STATUS "CPACK_PACKAGE_NAME: ${CPACK_PACKAGE_NAME}")
 set(CPACK_DEB_COMPONENT_INSTALL ON)
 set(CPACK_SET_DESTDIR TRUE)

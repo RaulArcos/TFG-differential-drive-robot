@@ -77,7 +77,7 @@ class gstVideoClient(object):
 
         caps = Gst.Caps.from_string("video/x-raw, width=1280, height=720, framerate=30/1, format=BGRx")
 
-        source.set_property("socket-path", f"/tmp/robotuca-socket-video")
+        source.set_property("socket-path", f"/tmp/rah01-socket-video")
         
         appsink = Gst.ElementFactory.make("appsink", "appsink")
         appsink.set_property("emit-signals", 1)

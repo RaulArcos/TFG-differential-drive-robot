@@ -1,6 +1,6 @@
 #include "videosocket_output.hpp"
 
-using namespace robotuca;
+using namespace rah01;
 
 VideoSocketOutput::VideoSocketOutput(const Resolution& res){
     bin_ = gst_bin_new("video-output");
@@ -15,7 +15,7 @@ VideoSocketOutput::VideoSocketOutput(const Resolution& res){
                                         "format", G_TYPE_STRING, "BGRx",
                                         NULL);
     
-    g_object_set(G_OBJECT(sink_), "sync", false, "wait-for-connection", false,"socket-path", "/tmp/robotuca-socket-video", "perms", 511, NULL);
+    g_object_set(G_OBJECT(sink_), "sync", false, "wait-for-connection", false,"socket-path", "/tmp/rah01-socket-video", "perms", 511, NULL);
 
     g_object_set(G_OBJECT(capsfilter_), "caps", caps, NULL);
 

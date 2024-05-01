@@ -1,0 +1,7 @@
+setup.py
+RAH01Detector/detector.py
+rah01Detector.egg-info/PKG-INFO
+rah01Detector.egg-info/SOURCES.txt
+rah01Detector.egg-info/dependency_links.txt
+rah01Detector.egg-info/not-zip-safe
+rah01Detector.egg-info/top_level.txt

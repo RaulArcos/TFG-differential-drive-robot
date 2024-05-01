@@ -3,13 +3,13 @@
 #include <chrono>
 #include <thread>
 
-using namespace robotuca;
+using namespace rah01;
 
 int main (int argc, char *argv[]){
     gst_init (&argc, &argv);
     GMainLoop *loop;
 
-    if(std::remove("/tmp/robotuca-socket-video") != 0);
+    if(std::remove("/tmp/rah01-socket-video") != 0);
 
     GstElement* pipeline = gst_pipeline_new ("pipeline");
 

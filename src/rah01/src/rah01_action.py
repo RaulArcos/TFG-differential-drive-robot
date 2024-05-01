@@ -28,8 +28,8 @@ class RAH01Action:
         self._tentative_action = False
         self._status: RAH01ActionStatus = RAH01ActionStatus.READY
         pygame.mixer.init()
-        self._whatsapp_sound = pygame.mixer.Sound('/home/robot/robotuca/sounds/whatsapp.mp3')
-        self._blip_sound = pygame.mixer.Sound('/home/robot/robotuca/sounds/blip.mp3')
+        self._whatsapp_sound = pygame.mixer.Sound('/home/robot/rah01/sounds/whatsapp.mp3')
+        self._blip_sound = pygame.mixer.Sound('/home/robot/rah01/sounds/blip.mp3')
     
     @property
     def status(self):

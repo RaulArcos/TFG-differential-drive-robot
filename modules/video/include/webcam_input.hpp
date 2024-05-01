@@ -5,7 +5,7 @@
 #include <gst/gst.h>
 #include <string>
 
-namespace robotuca{
+namespace rah01{
     class WebCamInput{
         public:
             WebCamInput(const Resolution& res);

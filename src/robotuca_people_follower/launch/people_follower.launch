@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<launch>
-  <node name="robotuca_people_follower" pkg="robotuca_people_follower" type="people_follower_node.py" output="screen">
-  </node>
-</launch>

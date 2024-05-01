@@ -1,4 +1,4 @@
-prefix=/home/robot/robotuca/devel
+prefix=/home/robot/rah01/devel
 
 Name: gmapping
 Description: Description of gmapping

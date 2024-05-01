@@ -1,8 +1,8 @@
-prefix=/home/robot/robotuca/devel
+prefix=/home/robot/rah01/devel
 
 Name: sensor_msgs
 Description: Description of sensor_msgs
 Version: 1.11.10
-Cflags: -I/home/robot/robotuca/devel/include -I/home/robot/robotuca/src/common_msgs/sensor_msgs/include
+Cflags: -I/home/robot/rah01/devel/include -I/home/robot/rah01/src/common_msgs/sensor_msgs/include
 Libs: -L${prefix}/lib 
 Requires: geometry_msgs message_runtime std_msgs

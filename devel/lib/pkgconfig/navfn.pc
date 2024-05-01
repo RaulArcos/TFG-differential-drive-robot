@@ -1,8 +1,8 @@
-prefix=/home/robot/robotuca/devel
+prefix=/home/robot/rah01/devel
 
 Name: navfn
 Description: Description of navfn
 Version: 1.17.3
-Cflags: -I/home/robot/robotuca/devel/include -I/home/robot/robotuca/src/navigation/navfn/include
+Cflags: -I/home/robot/rah01/devel/include -I/home/robot/rah01/src/navigation/navfn/include
 Libs: -L${prefix}/lib -lnavfn
 Requires: geometry_msgs message_runtime nav_core nav_msgs pluginlib roscpp sensor_msgs visualization_msgs

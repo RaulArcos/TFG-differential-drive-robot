@@ -1,8 +1,8 @@
-prefix=/home/robot/robotuca/devel
+prefix=/home/robot/rah01/devel
 
 Name: tf2_kdl
 Description: Description of tf2_kdl
 Version: 0.7.7
-Cflags: -I/home/robot/robotuca/src/geometry2/tf2_kdl/include -I/usr/include/eigen3 -I/usr/share/orocos_kdl/cmake/../../../include
+Cflags: -I/home/robot/rah01/src/geometry2/tf2_kdl/include -I/usr/include/eigen3 -I/usr/share/orocos_kdl/cmake/../../../include
 Libs: -L${prefix}/lib -lorocos-kdl
 Requires: 

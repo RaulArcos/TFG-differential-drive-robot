@@ -1,4 +1,4 @@
-prefix=/home/robot/robotuca/devel
+prefix=/home/robot/rah01/devel
 
 Name: robotuca_people_follower
 Description: Description of robotuca_people_follower

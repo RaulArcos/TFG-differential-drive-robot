@@ -1,4 +1,4 @@
-prefix=/home/robot/robotuca/devel
+prefix=/home/robot/rah01/devel
 
 Name: fake_localization
 Description: Description of fake_localization

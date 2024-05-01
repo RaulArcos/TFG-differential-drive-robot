@@ -67,14 +67,14 @@ set(teb_local_planner_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(teb_local_planner_SOURCE_PREFIX /home/robot/robotuca/src/teb_local_planner)
-  set(teb_local_planner_DEVEL_PREFIX /home/robot/robotuca/devel)
+  set(teb_local_planner_SOURCE_PREFIX /home/robot/rah01/src/teb_local_planner)
+  set(teb_local_planner_DEVEL_PREFIX /home/robot/rah01/devel)
   set(teb_local_planner_INSTALL_PREFIX "")
   set(teb_local_planner_PREFIX ${teb_local_planner_DEVEL_PREFIX})
 else()
   set(teb_local_planner_SOURCE_PREFIX "")
   set(teb_local_planner_DEVEL_PREFIX "")
-  set(teb_local_planner_INSTALL_PREFIX /home/robot/robotuca/install)
+  set(teb_local_planner_INSTALL_PREFIX /home/robot/rah01/install)
   set(teb_local_planner_PREFIX ${teb_local_planner_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(teb_local_planner_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/robot/robotuca/devel/include;/home/robot/robotuca/src/teb_local_planner/include;/usr/include/suitesparse;/opt/ros/noetic/include/g2o " STREQUAL " ")
+if(NOT "/home/robot/rah01/devel/include;/home/robot/rah01/src/teb_local_planner/include;/usr/include/suitesparse;/opt/ros/noetic/include/g2o " STREQUAL " ")
   set(teb_local_planner_INCLUDE_DIRS "")
-  set(_include_dirs "/home/robot/robotuca/devel/include;/home/robot/robotuca/src/teb_local_planner/include;/usr/include/suitesparse;/opt/ros/noetic/include/g2o")
+  set(_include_dirs "/home/robot/rah01/devel/include;/home/robot/rah01/src/teb_local_planner/include;/usr/include/suitesparse;/opt/ros/noetic/include/g2o")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/teb_local_planner " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/robot/robotuca/devel/include;/home/robot/robotuca/src/teb_local_pl
         message(FATAL_ERROR "Project 'teb_local_planner' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'teb_local_planner' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robot/robotuca/src/teb_local_planner/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'teb_local_planner' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robot/rah01/src/teb_local_planner/${idir}'.  ${_report}")
     endif()
     _list_append_unique(teb_local_planner_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robot/robotuca/devel/lib;/home/robot/robotuca/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/robot/rah01/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

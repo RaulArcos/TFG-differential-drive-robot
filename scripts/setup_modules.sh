@@ -4,32 +4,32 @@ module_to_compile="$1"
 
 compile_detector() {
   echo "Compiling RobotUcaDetector module..."
-  cd /home/robot/robotuca/modules/detector
+  cd /home/robot/rah01/modules/detector
   python setup.py sdist bdist_wheel
   sudo pip install .
-  sudo cp -r /usr/local/lib/python3.8/dist-packages/RobotUcaDetector /usr/lib/python3.8/dist-packages/RobotUcaDetector
-  echo "RobotUcaDetector module installed!"
+  sudo cp -r /usr/local/lib/python3.8/dist-packages/RAH01Detector /usr/lib/python3.8/dist-packages/RAH01Detector
+  echo "RAH01Detector module installed!"
 }
 
 compile_video() {
-  echo "Compiling RobotUcaVideo module..."
-  cd /home/robot/robotuca/modules/video
+  echo "Compiling RAH01Video module..."
+  cd /home/robot/rah01/modules/video
   if [ -d "build" ]; then
     rm -r build
   fi
   cmake -B build -H. -G "Unix Makefiles"
   cd build
   make -j6
-  echo "RobotUcaVideo module installed!"
+  echo "RAH01Video module installed!"
 }
 
 compile_web() {
-  echo "Compiling RobotUcaWeb module..."
-  cd /home/robot/robotuca/modules/web
+  echo "Compiling RAH01Web module..."
+  cd /home/robot/rah01/modules/web
   python setup.py sdist bdist_wheel
   sudo pip install .
-  sudo cp -r /usr/local/lib/python3.8/dist-packages/RobotUcaWeb /usr/lib/python3.8/dist-packages/RobotUcaWeb
-  echo "RobotUcaWeb module installed!"
+  sudo cp -r /usr/local/lib/python3.8/dist-packages/RAH01Web /usr/lib/python3.8/dist-packages/RAH01Web
+  echo "RAH01Web module installed!"
 }
 
 if [ "$module_to_compile" = "detector" ]; then

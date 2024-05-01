@@ -2,7 +2,7 @@ from visualization_msgs.msg import Marker, MarkerArray
 from std_msgs.msg import ColorRGBA, Header, String
 from geometry_msgs.msg import Point, Pose, PoseStamped, PoseWithCovarianceStamped, Quaternion, Twist
 from video_client import gstVideoClient
-from RobotUcaDetector import detector
+from RAH01Detector import detector
 import rospy
 import math
 from enum import Enum
@@ -31,7 +31,7 @@ class RAH01People:
         rospy.loginfo("Loading video client and detector...This may take up a few seconds!")
         self._video_client.init()
         rospy.loginfo("VideoClient Loaded!")
-        self._detector = detector.RobotUcaDetector(model_path='/etc/robotuca/models/yolov7-tiny.pt')
+        self._detector = detector.RAH01Detector(model_path='/etc/rah01/models/yolov7-tiny.pt')
         rospy.loginfo("Detector Loaded!")
 
     @property

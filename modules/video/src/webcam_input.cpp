@@ -1,6 +1,6 @@
 #include "webcam_input.hpp"
 
-using namespace robotuca;
+using namespace rah01;
 
 WebCamInput::WebCamInput(const Resolution& res){
     bin_ = gst_bin_new("cam-input");
