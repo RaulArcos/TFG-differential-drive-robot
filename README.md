@@ -23,7 +23,7 @@ El resultado es un robot que cuenta con capacidad de navegación autónoma adem�
 - Desarrollar una rutina de movimiento empleando planificador ROS con gestión de eventos al detectar objetos.
 
 ## Resultados
-### Navegación
+### Navegación Autónoma
 
 - Se han integrado los paquetes de ROS necesarios para la navegación autónoma del robot junto con sus respectivos ajustes de parámetros.
 <p align="center">
