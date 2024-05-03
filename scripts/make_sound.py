@@ -4,7 +4,7 @@ import pygame
 pygame.mixer.init()
 
 # Load the MP3 file
-pygame.mixer.music.load('/home/robot/robotuca/sounds/whatsapp.mp3')
+pygame.mixer.music.load('/home/robot/rah01/sounds/whatsapp.mp3')
 
 # Play the MP3 file
 pygame.mixer.music.play()

@@ -31,7 +31,7 @@ class RAH01People:
         rospy.loginfo("Loading video client and detector...This may take up a few seconds!")
         self._video_client.init()
         rospy.loginfo("VideoClient Loaded!")
-        self._detector = detector.RAH01Detector(model_path='/etc/rah01/models/yolov7-tiny.pt')
+        self._detector = detector.RAH01Detector(model_path='/etc/robotuca/models/yolov7-tiny.pt')
         rospy.loginfo("Detector Loaded!")
 
     @property
@@ -66,7 +66,7 @@ class RAH01People:
         
         distance = 12
         if abs(angle_init - angle_fin) > 5:
-            for angle in range(angle_center-3, angle_center+3, 1):
+            for angle in range(angle_center-5, angle_center+5, 1):
                 distance = min(distance, self._scan_data[angle])
         if distance > 8:
             return None
@@ -98,6 +98,8 @@ class RAH01People:
     def loop(self):
         while(True):
             posible_targets = []
+            self._person_distance = 0
+            self._person_angle_diference = 0
             _, frame = self._video_client.get_frame()
             if frame is not None and self._scan_data is not None:
                 boxes, _ = self._detector.detectPersonOnly(frame, 416)

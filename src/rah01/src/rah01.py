@@ -92,7 +92,6 @@ class RAH01:
             if self._status == RAH01Status.IDLE:
                 return
             
-            
             if self._status != RAH01Status.INTERACTING:
                 self._action.update_status()
                 self._status = RAH01Status(self._navigator.status)
@@ -101,14 +100,13 @@ class RAH01:
                 self._navigator.cancel_goal()
                 self._interact_with_people_thread.start() 
                 self._interact_with_people_thread = Thread(target=self._action.interact_with_person, daemon=True)
-                print("PERSON DETECTED")
                 self._status = RAH01Status.INTERACTING
             elif self._status == RAH01Status.WAITING or self._status == RAH01Status.GOAL_REACHED:
-                print("NEXT GOAL")
                 self._navigator.next_goal()
+                self._action.play_change_direction_sound()
             elif self._status == RAH01Status.GOAL_FAILED:
-                print("NEXT GOAL")
                 self._navigator.next_goal()
+                self._action.play_change_direction_sound()
             elif self._status == RAH01Status.INTERACTING:
                 if self._action.status == RAH01ActionStatus.TIMEOUT:
                     self._status = RAH01Status.WAITING
