@@ -1,0 +1,8 @@
+prefix=/home/robot/rah01/devel
+
+Name: lidar_publisher
+Description: Description of lidar_publisher
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

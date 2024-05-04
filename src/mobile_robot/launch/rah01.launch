@@ -68,7 +68,7 @@
     </node>
 
     <include file="$(find mobile_robot)/launch/robot_description.launch" pass_all_args="true"/>
-    <include file="$(find rplidar_ros)/launch/rplidar.launch" pass_all_args="true"/>
+    <!-- <include file="$(find rplidar_ros)/launch/rplidar.launch" pass_all_args="true"/> -->
     <include file="$(find rf2o_laser_odometry)/launch/rf2o_laser_odometry.launch" pass_all_args="true"/>
 
     <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
