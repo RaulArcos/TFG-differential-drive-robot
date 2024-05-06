@@ -47,4 +47,4 @@ El resultado es un robot que cuenta con capacidad de navegación autónoma adem�
 
 ## Equipo de Trabajo
 - Raúl Arcos Herrera: Desarrollador
-- Arturo Morgado: Tutor
+- Arturo Morgado Estévez: Tutor
