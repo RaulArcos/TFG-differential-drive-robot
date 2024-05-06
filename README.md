@@ -1,5 +1,6 @@
-# TFG: DESARROLLO DE SISTEMA DE CONTROL DE UN ROBOT DIFERENCIAL MÓVIL EMPLEANDO ROS PARA NAVEGACIÓN AUTÓNOMA
+# DESARROLLO DE SISTEMA DE CONTROL DE UN ROBOT DIFERENCIAL MÓVIL EMPLEANDO ROS PARA NAVEGACIÓN AUTÓNOMA
 
+Proyecto realizado como trabajo de fin de grado para el Laboratio de Robótica de la Escuela Superior de Ingeniería, UCA.
 ## Resumen
 
 En este proyecto se ha empleado ROS para el control de un robot diferencial, utilizando un modelo real no comercial. Para ello, se han implementado paquetes ya existentes compatibles con configuraciones adaptadas, así como paquetes desarrollados específicamente para el proyecto. 
